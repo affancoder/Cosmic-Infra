@@ -68,7 +68,7 @@ function Footer() {
 
       {/* Newsletter */}
       <div>
-        <h3>Newsletter</h3>
+        <h3>Remain Updated</h3>
         <input placeholder="Your email address" />
         <button>Sign up</button>
       </div>
