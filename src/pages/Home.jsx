@@ -16,6 +16,11 @@ import serviceBuy from "../assets/images/service-buy.png";
 import serviceManagement from "../assets/images/service-management.png";
 import realtor from "../assets/images/realtor.jpg";
 import emaar from "../assets/images/emaar.png"
+import embassy from "../assets/images/embassy.png";
+import kolte from "../assets/images/kolte.png";
+import myg from "../assets/images/myg.png";
+import dubai from "../assets/images/dubai.png";
+import partner6 from "../assets/images/partner-6.png";
 
 function Home() {
   return (
@@ -490,35 +495,35 @@ function Home() {
 
       <div className="partner-logo">
         <img
-          src="/src/assets/images/embassy.png"
+          src={embassy}
           alt="Embassy"
         />
       </div>
 
       <div className="partner-logo">
         <img
-          src="/src/assets/images/kolte.png"
+          src={kolte}
           alt="Partner"
         />
       </div>
 
       <div className="partner-logo">
         <img
-          src="/src/assets/images/myg.png"
+          src={myg}
           alt="Partner"
         />
       </div>
 
       <div className="partner-logo">
         <img
-          src="/src/assets/images/dubai.png"
+          src={dubai}
           alt="Dubai"
         />
       </div>
 
       <div className="partner-logo">
         <img
-          src="/src/assets/images/partner-6.png"
+          src={partner6}
           alt="Partner"
         />
       </div>
