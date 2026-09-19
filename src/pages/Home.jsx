@@ -551,6 +551,7 @@ function Home() {
         top: 0,
         behavior: "smooth"
       })}
+      
     >
       ↑
     </button>
