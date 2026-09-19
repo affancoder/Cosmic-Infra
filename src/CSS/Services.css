@@ -142,7 +142,7 @@
 
   align-items: stretch;
 
-  width: 490px;
+  width: 60%;
 
   min-height: 115px;
 
@@ -237,7 +237,7 @@
 
   font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 11px;
+  font-size: 16px;
 
   line-height: 1.4;
 
@@ -251,11 +251,11 @@
 
   font-family: Arial, Helvetica, sans-serif;
 
-  font-size: 10px;
+  font-size: 12px;
 
   line-height: 1.45;
 
-  font-weight: 600;
+  font-weight: 500;
 }
 
 
@@ -389,4 +389,701 @@
   .service-text p {
     font-size: 8.5px;
   }
+}
+
+/* =========================================
+   PART 2 - HAPPY CUSTOMERS
+========================================= */
+
+.happy-customers {
+  width: 100%;
+
+  background: #ffffff;
+}
+
+
+/* Heading */
+
+.happy-customers h2 {
+  margin: 0 0 35px;
+
+  text-align: center;
+
+  color: #080808;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   GOLD CUSTOMER AREA
+========================================= */
+
+.customer-cards {
+  width: 100%;
+
+  background: #cda653;
+
+  padding: 45px 30px 50px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+  gap: 25px;
+}
+
+
+/* =========================================
+   CUSTOMER CARD
+========================================= */
+
+.customer-card {
+  width: 30%;
+
+  min-height: 245px;
+
+  padding: 10px;
+
+  background: #292929;
+
+  border: 4px solid #292929;
+
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.35);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CUSTOMER IMAGE
+========================================= */
+
+.customer-image {
+  width: 100%;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  margin-bottom: 10px;
+}
+
+.customer-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================================
+   CUSTOMER TEXT
+========================================= */
+
+.customer-card p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.35;
+}
+
+.customer-card span {
+  margin-top: 3px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .happy-customers {
+    padding-top: 60px;
+  }
+
+  .happy-customers h2 {
+    font-size: 27px;
+
+    padding: 0 20px;
+  }
+
+  .customer-cards {
+    gap: 18px;
+
+    padding: 40px 20px 45px;
+  }
+
+  .customer-card {
+    width: 31%;
+
+    min-height: 230px;
+  }
+
+  .customer-image {
+    height: 125px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .happy-customers {
+    padding-top: 50px;
+  }
+
+  .happy-customers h2 {
+    font-size: 24px;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+  }
+
+  .customer-cards {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 35px 20px 45px;
+  }
+
+  .customer-card {
+    width: 100%;
+
+    max-width: 300px;
+
+    min-height: 260px;
+  }
+
+  .customer-image {
+    height: 155px;
+  }
+
+  .customer-card p {
+    font-size: 11px;
+  }
+
+  .customer-card span {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .happy-customers h2 {
+    font-size: 21px;
+  }
+
+  .customer-cards {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .customer-card {
+    max-width: 280px;
+  }
+
+}
+
+/* =========================================
+   PART 3 - FINAL CTA
+========================================= */
+
+.services-final {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 600px;
+
+  background: #ffffff;
+
+  padding: 70px 30px 100px;
+
+  overflow: hidden;
+}
+
+.services-final {
+  position: relative;
+
+  width: 100%;
+  min-height: 600px;
+
+  background-color: #ffffff;
+  background-image: url("../assets/images/bg-red.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 70px 30px 100px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CTA TITLE
+========================================= */
+
+.final-title {
+  width: 385px;
+
+  height: 62px;
+
+  background: #cda653;
+
+  border-radius: 0 8px 8px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 55px;
+
+  margin-left: -30px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.final-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   FINAL CONTENT
+========================================= */
+
+.final-content {
+  width: 100%;
+
+  max-width: 1050px;
+
+  min-height: 390px;
+
+  margin: 60px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+
+/* =========================================
+   QUESTION IMAGE
+========================================= */
+
+.final-question {
+  width: 45%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.final-question img {
+  width: 100%;
+
+  max-width: 400px;
+
+  height: 300px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================
+   PROPERTY IMAGE
+========================================= */
+
+.final-property {
+  position: relative;
+
+  width: 48%;
+
+  max-width: 430px;
+
+  height: 280px;
+
+  border-radius: 14px;
+
+  overflow: visible;
+}
+
+.final-property > img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 14px;
+}
+
+
+/* =========================================
+   DISCOVER PROPERTIES BOX
+========================================= */
+
+.discover-box {
+  position: absolute;
+
+  right: -15px;
+
+  bottom: -20px;
+
+  width: 205px;
+
+  min-height: 105px;
+
+  background: #cda653;
+
+  color: #ffffff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-left: 35px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  z-index: 2;
+}
+
+
+/* Triangle / folded corner */
+
+.discover-box::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -25px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 25px solid #cda653;
+
+  border-left: 25px solid transparent;
+}
+
+
+/* =========================================
+   FLOATING BUTTONS
+========================================= */
+
+.floating-buttons {
+  position: fixed;
+
+  right: 25px;
+
+  bottom: 70px;
+
+  z-index: 1000;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.floating-button {
+  width: 52px;
+
+  height: 52px;
+
+  border-radius: 50%;
+
+  background: #cda653;
+
+  color: #111111;
+
+  border: none;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.20);
+
+  transition: 0.3s ease;
+}
+
+.floating-button:hover {
+  transform: translateY(-3px);
+
+  background: #b99245;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .services-final {
+    min-height: 550px;
+
+    padding: 60px 25px 90px;
+  }
+
+  .final-title {
+    width: 350px;
+
+    margin-left: -25px;
+  }
+
+  .final-content {
+    gap: 30px;
+
+    margin-top: 55px;
+  }
+
+  .final-question img {
+    height: 260px;
+  }
+
+  .final-property {
+    height: 240px;
+  }
+
+  .discover-box {
+    width: 185px;
+
+    min-height: 95px;
+
+    font-size: 20px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .services-final {
+    min-height: auto;
+
+    padding: 45px 20px 80px;
+  }
+
+
+  /* Title */
+
+  .final-title {
+    width: calc(100% + 20px);
+
+    height: 55px;
+
+    margin-left: -20px;
+
+    padding-left: 25px;
+
+    border-radius: 0 8px 8px 0;
+  }
+
+  .final-title h2 {
+    font-size: 19px;
+  }
+
+
+  /* Stack content */
+
+  .final-content {
+    flex-direction: column;
+
+    gap: 50px;
+
+    margin-top: 50px;
+  }
+
+
+  /* Question */
+
+  .final-question {
+    width: 100%;
+  }
+
+  .final-question img {
+    width: 90%;
+
+    max-width: 330px;
+
+    height: 240px;
+  }
+
+
+  /* Property */
+
+  .final-property {
+    width: 90%;
+
+    max-width: 350px;
+
+    height: 230px;
+  }
+
+  .discover-box {
+    right: -10px;
+
+    bottom: -15px;
+
+    width: 170px;
+
+    min-height: 85px;
+
+    padding-left: 25px;
+
+    font-size: 18px;
+  }
+
+
+  /* Floating buttons */
+
+  .floating-buttons {
+    right: 15px;
+
+    bottom: 25px;
+  }
+
+  .floating-button {
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .services-final {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .final-title {
+    margin-left: -15px;
+
+    width: calc(100% + 15px);
+
+    padding-left: 20px;
+  }
+
+  .final-title h2 {
+    font-size: 17px;
+  }
+
+  .final-question img {
+    height: 210px;
+  }
+
+  .final-property {
+    height: 200px;
+  }
+
+  .discover-box {
+    width: 150px;
+
+    min-height: 75px;
+
+    font-size: 16px;
+  }
+
+  .floating-buttons {
+    right: 10px;
+  }
+
 }
