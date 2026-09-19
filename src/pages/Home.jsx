@@ -444,11 +444,7 @@ function Home() {
               <h2>We are Cosmic Infra</h2>
 
               <p>
-                Welcome to Property Street, your gateway to a world of
-                exceptional real estate opportunities. At Property Street,
-                we understand that finding the perfect home or investment
-                property is more than just a transaction — it's a
-                significant milestone in your life.
+                Welcome to Property Street, your gateway to a world of exceptional real estate opportunities. At Property Street, we understand that finding the perfect home or investment property is more than a transaction—it's a significant milestone in your life. 
               </p>
 
               <p>

@@ -69,11 +69,13 @@ display: block;
   color: white;
 }
 
+/* Footer */
+
 .footer {
   background: #292929;
   color: white;
 
-  padding: 70px 8%;
+  padding: 10% 8%;
 
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 1fr;
@@ -105,6 +107,23 @@ display: block;
   height: auto;
 }
 
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -45px;
+  left: -5%;
+  width: 110%;
+  height: 100px;
+  background: white;
+  transform: rotate(-4deg);
+  transform-origin: center;
+  z-index: 1;
+}
 /* =========================
    HERO SECTION
 ========================= */
