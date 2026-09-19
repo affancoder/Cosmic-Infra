@@ -464,6 +464,95 @@ function Home() {
             </div>
           </div>
         </section>
+
+        {/* =========================
+    PARTNERS SECTION
+========================= */}
+
+<section className="partners-section">
+
+  <div className="partners-container">
+
+    <div className="partners-heading">
+      <span>Our</span>
+      <h2>Partners</h2>
+    </div>
+
+    <div className="partners-logos">
+
+      <div className="partner-logo">
+        <img
+          src="/src/assets/images/emaar.png"
+          alt="Emaar"
+        />
+      </div>
+
+      <div className="partner-logo">
+        <img
+          src="/src/assets/images/embassy.png"
+          alt="Embassy"
+        />
+      </div>
+
+      <div className="partner-logo">
+        <img
+          src="/src/assets/images/kolte.png"
+          alt="Partner"
+        />
+      </div>
+
+      <div className="partner-logo">
+        <img
+          src="/src/assets/images/myg.png"
+          alt="Partner"
+        />
+      </div>
+
+      <div className="partner-logo">
+        <img
+          src="/src/assets/images/dubai.png"
+          alt="Dubai"
+        />
+      </div>
+
+      <div className="partner-logo">
+        <img
+          src="/src/assets/images/partner-6.png"
+          alt="Partner"
+        />
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* Floating Buttons */}
+
+  <div className="floating-buttons">
+
+    <button
+      className="floating-button chat-button"
+      aria-label="Chat"
+    >
+      <span>●</span>
+    </button>
+
+    <button
+      className="floating-button top-button"
+      aria-label="Back to top"
+      onClick={() => window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })}
+    >
+      ↑
+    </button>
+
+  </div>
+
+</section>
+
       </main>
 
       <Footer />
