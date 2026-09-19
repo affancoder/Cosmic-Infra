@@ -71,13 +71,34 @@ function Footer() {
         <h3>Remain Updated</h3>
         <input placeholder="Your email address" />
         <button>Sign up</button>
+
+        {/* Social Media */}
+        <div className="footer-social">
+
+          <div className="social-icons">
+            <a href="#" aria-label="Facebook">
+              f
+            </a>
+            <a href="#" aria-label="Instagram">
+              ◎
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              in
+            </a>
+            <a href="#" aria-label="YouTube">
+              ▶
+            </a>
+            <a href="#" aria-label="X">
+              𝕏
+            </a>
+          </div>
+        </div>
       </div>
 
       <p className="copyright">
         <CopyrightIcon />
-        <span>2026 All Rights Reserved</span>
+        <span>2026 All Rights Reserved.</span>
       </p>
-
     </footer>
   );
 }
