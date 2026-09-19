@@ -347,6 +347,7 @@
 
   .property-cards {
     grid-template-columns: 1fr;
+    height: auto;
   }
 
   .view-all-btn {
@@ -355,10 +356,6 @@
     display: block;
 
     margin: 0 auto 25px;
-  }
-
-  .property-card > img {
-    height: 200px;
   }
 
 }
@@ -549,9 +546,14 @@
     gap: 15px;
   }
 
+  .testimonial-quote{
+    /* margin-left: -50px; */
+    display: none;
+  }
+
   .testimonial-text {
     width: 100%;
-
+    padding: 0;
     order: 1;
   }
 
@@ -564,13 +566,13 @@
   }
 
   .testimonial-arrow {
-    font-size: 25px;
+    font-size: 45px;
   }
 
 }
 
 .looking-section{
-  height: 760px;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -715,13 +717,14 @@
 @media (max-width: 768px) {
 
   .looking-section {
+    min-height: 1240px;
     padding: 50px 20px;
   }
 
   .looking-cards {
     grid-template-columns: 1fr;
     gap: 15px;
-
+    flex-direction: column;
     max-width: 400px;
   }
 
