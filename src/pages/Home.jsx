@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../CSS/Home.css";
+import property1 from "../assets/images/property-1.jpg";
 
 function Home() {
   return (
@@ -55,7 +56,7 @@ function Home() {
 
               <select>
                 <option>Select City</option>
-                <option>Kolkata</option>
+                <option>Bengaluru</option>
                 <option>Delhi</option>
                 <option>Mumbai</option>
               </select>
@@ -81,7 +82,7 @@ function Home() {
           <div className="property-cards">
             {/* Card 1 */}
             <div className="property-card">
-              <img src="/src/assets/images/property-1.jpg" alt="Property" />
+              <img src={property1} alt="Property" />
 
               <div className="property-info">
                 <h3>CHITRAKUT HEIGHTS</h3>
