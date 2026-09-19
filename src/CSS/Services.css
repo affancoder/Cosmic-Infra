@@ -1,0 +1,392 @@
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.services-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.services-hero {
+  position: relative;
+
+  width: 100%;
+  height: 300px;
+
+  overflow: hidden;
+
+  background: #292929;
+}
+
+.services-hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+.services-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  z-index: 1;
+}
+
+.services-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.services-hero-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 48px;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   SERVICES LIST
+========================================= */
+
+.services-list {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 620px;
+
+  padding: 50px 15px 80px;
+
+  background-color: #ffffff;
+
+  background-image:
+    radial-gradient(
+      rgba(190, 190, 190, 0.28) 1.3px,
+      transparent 1.3px
+    );
+
+  background-size: 18px 18px;
+
+  overflow: hidden;
+}
+
+
+/* Soft white fade on right */
+.services-list::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 45%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.85)
+    );
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: stretch;
+
+  width: 490px;
+
+  min-height: 115px;
+
+  background: #eeeeee;
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.20);
+
+  overflow: hidden;
+}
+
+
+/* LEFT CARD */
+
+.service-card-left {
+  margin-left: 15px;
+  margin-right: auto;
+
+  border-radius: 0 15px 0 0;
+}
+
+
+/* RIGHT CARD */
+
+.service-card-right {
+  margin-left: auto;
+  margin-right: 15px;
+
+  border-radius: 15px 0 0 0;
+}
+
+
+/* =========================================
+   CARD SPACING
+========================================= */
+
+.service-card + .service-card {
+  margin-top: 42px;
+}
+
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.service-image {
+  flex: 0 0 115px;
+
+  width: 115px;
+  min-height: 115px;
+
+  background: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 80px;
+  height: 80px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================
+   TEXT AREA
+========================================= */
+
+.service-text {
+  flex: 1;
+
+  padding: 18px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.service-text h3 {
+  margin: 0 0 7px;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+}
+
+.service-text p {
+  margin: 0;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.45;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .services-hero {
+    height: 270px;
+  }
+
+  .services-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .services-list {
+    padding-top: 45px;
+  }
+
+  .service-card {
+    width: 65%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .services-hero {
+    height: 220px;
+  }
+
+  .services-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .services-list {
+    min-height: auto;
+
+    padding: 35px 15px 60px;
+
+    background-size: 16px 16px;
+  }
+
+  .service-card,
+  .service-card-left,
+  .service-card-right {
+    width: 100%;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    border-radius: 12px;
+  }
+
+  .service-card + .service-card {
+    margin-top: 25px;
+  }
+
+  .service-image {
+    flex: 0 0 95px;
+
+    width: 95px;
+    min-height: 115px;
+  }
+
+  .service-image img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .service-text {
+    padding: 14px;
+  }
+
+  .service-text h3 {
+    font-size: 11px;
+  }
+
+  .service-text p {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .services-hero {
+    height: 190px;
+  }
+
+  .services-hero-content h1 {
+    font-size: 29px;
+  }
+
+  .services-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .service-image {
+    flex: 0 0 80px;
+
+    width: 80px;
+    min-height: 105px;
+  }
+
+  .service-image img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .service-text {
+    padding: 11px;
+  }
+
+  .service-text h3 {
+    font-size: 10px;
+  }
+
+  .service-text p {
+    font-size: 8.5px;
+  }
+}
