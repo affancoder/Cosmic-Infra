@@ -8,7 +8,6 @@ import {
   Phone,
   Mail,
   CopyrightIcon,
-  TextAlignCenter,
 } from "lucide-react";
 
 function Footer() {
