@@ -51,6 +51,9 @@ button {
   justify-content: space-between;
 
   padding: 0 6%;
+  position: sticky;
+  top : 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -125,6 +128,93 @@ display: block;
 
   .navbar nav a {
     font-size: 11px;
+  }
+}
+
+/* =========================
+   NAVBAR RESPONSIVE
+========================= */
+
+.menu-btn {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+
+  .navbar {
+    height: 80px;
+    padding: 0 5%;
+  }
+
+  .navbar nav {
+    gap: 25px;
+  }
+
+  .navbar nav a {
+    font-size: 13px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 70px;
+    padding: 0 5%;
+  }
+
+  .logo {
+    width: 95px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: #292929;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0;
+
+    padding: 10px 0;
+
+    z-index: 999;
+  }
+
+  .navbar nav.nav-open {
+    display: flex;
+  }
+
+  .navbar nav a {
+    width: 100%;
+    text-align: center;
+
+    padding: 15px 0;
+
+    font-size: 14px;
+  }
+
+  .navbar nav a:hover {
+    background: #3a3a3a;
+    color: #d8bb78;
   }
 }
 
