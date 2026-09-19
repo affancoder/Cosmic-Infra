@@ -78,14 +78,14 @@ display: block;
   .navbar {
     padding: 0 5%;
   }
+  .navbar img {
+    width: 50px;
+  }
 
   .navbar nav {
-    gap: 25px;
+    /* gap: 25px; */
   }
 
-  .navbar nav a {
-    font-size: 13px;
-  }
 }
 
 /* Mobile */
