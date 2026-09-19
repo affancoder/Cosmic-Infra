@@ -15,6 +15,7 @@ import serviceSell from "../assets/images/service-sell.png";
 import serviceBuy from "../assets/images/service-buy.png";
 import serviceManagement from "../assets/images/service-management.png";
 import realtor from "../assets/images/realtor.jpg";
+import emaar from "../assets/images/emaar.png"
 
 function Home() {
   return (
@@ -482,7 +483,7 @@ function Home() {
 
       <div className="partner-logo">
         <img
-          src="/src/assets/images/emaar.png"
+          src={emaar}
           alt="Emaar"
         />
       </div>
