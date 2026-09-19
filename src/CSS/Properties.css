@@ -363,3 +363,26 @@
     font-size: 12px;
   }
 }
+
+.view-details-btn {
+  background: #d2ad5d;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  padding: 9px 17px;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  transition: 0.2s ease;
+}
+
+.view-details-btn:hover {
+  background: #bd994d;
+}

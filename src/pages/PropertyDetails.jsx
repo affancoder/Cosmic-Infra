@@ -1,10 +1,7 @@
-import { Link } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "../CSS/Properties.css";
-
-import servicesBuilding from "../assets/images/newtown-villa.jpg";
+import "../CSS/PropertyDetails.css";
 
 import property1 from "../assets/images/category-house.jpg";
 import property2 from "../assets/images/property-2.jpg";
@@ -22,7 +19,9 @@ import property13 from "../assets/images/property-2.jpg";
 import property14 from "../assets/images/property-4.jpg";
 import property15 from "../assets/images/property-5.jpg";
 
-function Properties() {
+function PropertyDetails() {
+  const { id } = useParams();
+
   const properties = [
     {
       id: 1,
@@ -101,79 +100,98 @@ function Properties() {
     },
   ];
 
+  const property = properties.find(
+    (item) => item.id === Number(id)
+  );
+
+  if (!property) {
+    return (
+      <>
+        <Navbar />
+
+        <main className="property-not-found">
+          <h1>Property Not Found</h1>
+
+          <Link to="/properties">
+            Back to Properties
+          </Link>
+        </main>
+
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar />
 
-      <main className="properties-page">
+      <main className="property-details-page">
 
-        {/* =========================
-            PROPERTIES HERO
-        ========================= */}
-        <section className="properties-hero">
+        <section className="property-details">
 
-          <img
-            src={servicesBuilding}
-            alt="Properties"
-            className="properties-hero-image"
-          />
-
-          <div className="properties-hero-overlay"></div>
-
-          <div className="properties-hero-content">
-            <p>check out some of our latest properties</p>
-            <h1>PROPERTIES</h1>
+          <div className="property-details-image">
+            <img
+              src={property.image}
+              alt={property.name}
+            />
           </div>
 
-        </section>
+          <div className="property-details-content">
 
+            <p className="property-details-location">
+              📍 Bandra
+            </p>
 
-        {/* =========================
-            PROPERTY GRID
-        ========================= */}
-        <section className="properties-grid-section">
+            <h1>{property.name}</h1>
 
-          <div className="properties-grid">
+            <h2>₹92 Lakhs</h2>
 
-            {properties.map((property) => (
-              <div
-                className="property-card"
-                key={property.id}
-              >
+            <p className="property-details-description">
+              This property offers comfortable living spaces,
+              modern design and convenient connectivity. It is
+              suitable for residential living and investment
+              purposes.
+            </p>
 
-                <div className="property-image">
-                  <img
-                    src={property.image}
-                    alt={property.name}
-                  />
-                </div>
+            <div className="property-features">
 
-                <div className="property-info">
-
-                  <h3>{property.name}</h3>
-
-                  <p className="property-location">
-                    <span>⌖</span>
-                    Bandra
-                  </p>
-
-                  <div className="property-bottom">
-
-                    <strong>₹92 Lakhs</strong>
-
-                    <Link
-                      to={`/properties/${property.id}`}
-                      className="view-details-btn"
-                    >
-                      View Details
-                    </Link>
-
-                  </div>
-
-                </div>
-
+              <div>
+                <strong>Residential</strong>
+                <span>Property Type</span>
               </div>
-            ))}
+
+              <div>
+                <strong>3</strong>
+                <span>Bedrooms</span>
+              </div>
+
+              <div>
+                <strong>2</strong>
+                <span>Bathrooms</span>
+              </div>
+
+              <div>
+                <strong>1,450 sq.ft</strong>
+                <span>Area</span>
+              </div>
+
+            </div>
+
+            <div className="property-details-actions">
+
+              <button className="contact-property-btn">
+                Contact Us
+              </button>
+
+              <Link
+                to="/properties"
+                className="back-properties-btn"
+              >
+                Back to Properties
+              </Link>
+
+            </div>
 
           </div>
 
@@ -186,4 +204,4 @@ function Properties() {
   );
 }
 
-export default Properties;
+export default PropertyDetails;
