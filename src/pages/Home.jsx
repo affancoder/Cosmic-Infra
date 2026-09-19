@@ -1,7 +1,20 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../CSS/Home.css";
+
 import property1 from "../assets/images/property-1.jpg";
+import property2 from "../assets/images/property-2.jpg";
+import property3 from "../assets/images/property-3.jpg";
+import client from "../assets/images/client.jpg";
+import apartment from "../assets/images/apartment.png";
+import house from "../assets/images/house.png";
+import office from "../assets/images/office.png";
+import newtownVilla from "../assets/images/newtown-villa.jpg";
+import categoryHouse from "../assets/images/category-house.jpg";
+import serviceSell from "../assets/images/service-sell.png";
+import serviceBuy from "../assets/images/service-buy.png";
+import serviceManagement from "../assets/images/service-management.png";
+import realtor from "../assets/images/realtor.jpg";
 
 function Home() {
   return (
@@ -99,7 +112,7 @@ function Home() {
 
             {/* Card 2 */}
             <div className="property-card">
-              <img src="/src/assets/images/property-2.jpg" alt="Property" />
+              <img src={property2} alt="Property" />
 
               <div className="property-info">
                 <h3>BHAWANI NIVARA</h3>
@@ -116,7 +129,7 @@ function Home() {
 
             {/* Card 3 */}
             <div className="property-card">
-              <img src="/src/assets/images/property-3.jpg" alt="Property" />
+              <img src={property3} alt="Property" />
 
               <div className="property-info">
                 <h3>OTC CAPITAL CITY</h3>
@@ -162,7 +175,7 @@ function Home() {
 
             {/* Client Image */}
             <div className="client-image">
-              <img src="/src/assets/images/client.jpg" alt="Client" />
+              <img src={client} alt="Client" />
             </div>
 
             {/* Client Details */}
@@ -188,12 +201,13 @@ function Home() {
           <p>WE'RE HERE TO HELP YOU</p>
           <h2>WHAT ARE YOU LOOKING FOR?</h2>
         </div>
+
         <section className="looking-section">
           <div className="looking-cards">
             {/* Apartments */}
             <div className="looking-card">
               <div className="looking-image">
-                <img src="/src/assets/images/apartment.png" alt="Apartments" />
+                <img src={apartment} alt="Apartments" />
               </div>
 
               <div className="looking-info">
@@ -209,7 +223,7 @@ function Home() {
             {/* Houses */}
             <div className="looking-card">
               <div className="looking-image">
-                <img src="/src/assets/images/house.png" alt="Houses" />
+                <img src={house} alt="Houses" />
               </div>
 
               <div className="looking-info">
@@ -225,7 +239,7 @@ function Home() {
             {/* Offices */}
             <div className="looking-card">
               <div className="looking-image">
-                <img src="/src/assets/images/office.png" alt="Offices" />
+                <img src={office} alt="Offices" />
               </div>
 
               <div className="looking-info">
@@ -239,11 +253,14 @@ function Home() {
             </div>
           </div>
         </section>
+
         <div className="bottom-gap"></div>
 
         {/* Categories Section */}
+
         <div className="category-top">
-          <img src="/src/assets/images/newtown-villa.jpg" alt="House" />
+          <img src={newtownVilla} alt="House" />
+
           <div className="categories-heading">
             <p>FIND YOUR PERFECT HOME</p>
             <h2>CATEGORIES</h2>
@@ -256,10 +273,7 @@ function Home() {
               {/* House */}
               <div className="category-card">
                 <div className="category-image">
-                  <img
-                    src="/src/assets/images/category-house.jpg"
-                    alt="House"
-                  />
+                  <img src={categoryHouse} alt="House" />
 
                   <div className="category-image-overlay"></div>
 
@@ -277,10 +291,7 @@ function Home() {
               {/* Office */}
               <div className="category-card">
                 <div className="category-image">
-                  <img
-                    src="/src/assets/images/category-house.jpg"
-                    alt="Office"
-                  />
+                  <img src={categoryHouse} alt="Office" />
 
                   <div className="category-image-overlay"></div>
 
@@ -298,7 +309,7 @@ function Home() {
               {/* Land */}
               <div className="category-card">
                 <div className="category-image">
-                  <img src="/src/assets/images/category-house.jpg" alt="Land" />
+                  <img src={categoryHouse} alt="Land" />
 
                   <div className="category-image-overlay"></div>
 
@@ -316,10 +327,7 @@ function Home() {
               {/* Villa */}
               <div className="category-card">
                 <div className="category-image">
-                  <img
-                    src="/src/assets/images/category-house.jpg"
-                    alt="Villa"
-                  />
+                  <img src={categoryHouse} alt="Villa" />
 
                   <div className="category-image-overlay"></div>
 
@@ -337,7 +345,7 @@ function Home() {
               {/* Shop */}
               <div className="category-card">
                 <div className="category-image">
-                  <img src="/src/assets/images/category-house.jpg" alt="Shop" />
+                  <img src={categoryHouse} alt="Shop" />
 
                   <div className="category-image-overlay"></div>
 
@@ -355,10 +363,7 @@ function Home() {
               {/* Lease */}
               <div className="category-card">
                 <div className="category-image">
-                  <img
-                    src="/src/assets/images/category-house.jpg"
-                    alt="Lease"
-                  />
+                  <img src={categoryHouse} alt="Lease" />
 
                   <div className="category-image-overlay"></div>
 
@@ -391,10 +396,7 @@ function Home() {
               {/* Buy Property */}
               <div className="service-card">
                 <div className="service-image">
-                  <img
-                    src="/src/assets/images/service-sell.png"
-                    alt="Buy Property"
-                  />
+                  <img src={serviceSell} alt="Buy Property" />
 
                   <div className="service-overlay"></div>
 
@@ -407,10 +409,7 @@ function Home() {
               {/* Sell Property */}
               <div className="service-card">
                 <div className="service-image">
-                  <img
-                    src="/src/assets/images/service-buy.png"
-                    alt="Sell Property"
-                  />
+                  <img src={serviceBuy} alt="Sell Property" />
 
                   <div className="service-overlay"></div>
 
@@ -423,10 +422,7 @@ function Home() {
               {/* Asset Management */}
               <div className="service-card">
                 <div className="service-image">
-                  <img
-                    src="/src/assets/images/service-management.png"
-                    alt="Asset Management"
-                  />
+                  <img src={serviceManagement} alt="Asset Management" />
 
                   <div className="service-overlay"></div>
 
@@ -439,56 +435,39 @@ function Home() {
           </div>
         </section>
 
-        {/* =========================
-    AR REALTOR SECTION
-========================= */}
+        {/* AR REALTOR SECTION */}
 
-<section className="realtor-section">
+        <section className="realtor-section">
+          <div className="realtor-container">
+            {/* Left Content */}
+            <div className="realtor-content">
+              <h2>We are Cosmic Infra</h2>
 
-  <div className="realtor-container">
+              <p>
+                Welcome to Property Street, your gateway to a world of
+                exceptional real estate opportunities. At Property Street,
+                we understand that finding the perfect home or investment
+                property is more than just a transaction — it's a
+                significant milestone in your life.
+              </p>
 
-    {/* Left Content */}
-    <div className="realtor-content">
+              <p>
+                Our platform is designed to simplify your property search,
+                offering a seamless experience to explore a diverse range
+                of apartments, villas, plots and more.
+              </p>
 
-      <h2>
-        We are Cosmic Infra
-      </h2>
+              <button className="realtor-button">
+                Read more
+              </button>
+            </div>
 
-      <p>
-        Welcome to Property Street, your gateway to a world of
-        exceptional real estate opportunities. At Property Street,
-        we understand that finding the perfect home or investment
-        property is more than just a transaction — it's a
-        significant milestone in your life.
-      </p>
-
-      <p>
-        Our platform is designed to simplify your property search,
-        offering a seamless experience to explore a diverse range
-        of apartments, villas, plots and more.
-      </p>
-
-      <button className="realtor-button">
-        Read more
-      </button>
-
-    </div>
-
-
-    {/* Right Image */}
-    <div className="realtor-image">
-
-      <img
-        src="/src/assets/images/realtor.jpg"
-        alt="AR Realtor"
-      />
-
-    </div>
-
-  </div>
-
-</section>
-
+            {/* Right Image */}
+            <div className="realtor-image">
+              <img src={realtor} alt="AR Realtor" />
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
