@@ -120,7 +120,7 @@ display: block;
 .footer::before {
   content: "";
   position: absolute;
-  top: -45px;
+  top: -55px;
   left: -5%;
   width: 110%;
   height: 100px;
