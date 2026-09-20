@@ -67,7 +67,7 @@ function Contact() {
           <h3>Call Us</h3>
 
           <p>
-            +91 9836774342
+            9999999990
           </p>
         </div>
 

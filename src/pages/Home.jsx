@@ -11,11 +11,11 @@ import house from "../assets/images/house.png";
 import office from "../assets/images/office.png";
 import newtownVilla from "../assets/images/newtown-villa.jpg";
 import categoryHouse from "../assets/images/category-house.jpg";
-import serviceSell from "../assets/images/service-sell.png";
-import serviceBuy from "../assets/images/service-buy.png";
-import serviceManagement from "../assets/images/service-management.png";
+import buyProperty from "../assets/images/service-sell.png";
+import sellProperty from "../assets/images/service-buy.png";
+import assetManagement from "../assets/images/service-management.png";
 import realtor from "../assets/images/realtor.jpg";
-import emaar from "../assets/images/emaar.png"
+import emaar from "../assets/images/emaar.png";
 import embassy from "../assets/images/embassy.png";
 import kolte from "../assets/images/kolte.png";
 import myg from "../assets/images/myg.png";
@@ -389,53 +389,39 @@ function Home() {
 
         {/* Our Services Section */}
 
-        <section className="services-section">
-          <div className="services-container">
-            {/* Heading */}
-            <div className="services-heading">
-              <p>Check Out</p>
-              <h2>OUR SERVICES</h2>
+        <section className="cosmic-services-section">
+          {/* Section Heading */}
+          <div className="cosmic-services-heading">
+            <span>Check Out</span>
+            <h2>Our Services</h2>
+          </div>
+
+          {/* Services Cards */}
+          <div className="cosmic-services-cards">
+            {/* Buy Property */}
+            <div className="cosmic-service-card">
+              <img src={buyProperty} alt="Buy Property" />
+
+              <div className="cosmic-service-overlay">
+                <h3>Buy Property</h3>
+              </div>
             </div>
 
-            {/* Services Cards */}
-            <div className="services-grid">
-              {/* Buy Property */}
-              <div className="service-card">
-                <div className="service-image">
-                  <img src={serviceSell} alt="Buy Property" />
+            {/* Sell Property */}
+            <div className="cosmic-service-card">
+              <img src={sellProperty} alt="Sell Property" />
 
-                  <div className="service-overlay"></div>
-
-                  <div className="service-title">
-                    <h3>BUY PROPERTY</h3>
-                  </div>
-                </div>
+              <div className="cosmic-service-overlay">
+                <h3>Sell Property</h3>
               </div>
+            </div>
 
-              {/* Sell Property */}
-              <div className="service-card">
-                <div className="service-image">
-                  <img src={serviceBuy} alt="Sell Property" />
+            {/* Asset Management */}
+            <div className="cosmic-service-card">
+              <img src={assetManagement} alt="Asset Management" />
 
-                  <div className="service-overlay"></div>
-
-                  <div className="service-title">
-                    <h3>SELL PROPERTY</h3>
-                  </div>
-                </div>
-              </div>
-
-              {/* Asset Management */}
-              <div className="service-card">
-                <div className="service-image">
-                  <img src={serviceManagement} alt="Asset Management" />
-
-                  <div className="service-overlay"></div>
-
-                  <div className="service-title">
-                    <h3>ASSET MANAGEMENT</h3>
-                  </div>
-                </div>
+              <div className="cosmic-service-overlay">
+                <h3>Asset Management</h3>
               </div>
             </div>
           </div>
@@ -450,18 +436,20 @@ function Home() {
               <h2>We are Cosmic Infra</h2>
 
               <p>
-                Welcome to Property Street, your gateway to a world of exceptional real estate opportunities. At Property Street, we understand that finding the perfect home or investment property is more than a transaction—it's a significant milestone in your life. 
+                Welcome to Property Street, your gateway to a world of
+                exceptional real estate opportunities. At Property Street, we
+                understand that finding the perfect home or investment property
+                is more than a transaction—it's a significant milestone in your
+                life.
               </p>
 
               <p>
                 Our platform is designed to simplify your property search,
-                offering a seamless experience to explore a diverse range
-                of apartments, villas, plots and more.
+                offering a seamless experience to explore a diverse range of
+                apartments, villas, plots and more.
               </p>
 
-              <button className="realtor-button">
-                Read more
-              </button>
+              <button className="realtor-button">Read more</button>
             </div>
 
             {/* Right Image */}
@@ -475,91 +463,61 @@ function Home() {
     PARTNERS SECTION
 ========================= */}
 
-<section className="partners-section">
+        <section className="partners-section">
+          <div className="partners-container">
+            <div className="partners-heading">
+              <span>Our</span>
+              <h2>Partners</h2>
+            </div>
 
-  <div className="partners-container">
+            <div className="partners-logos">
+              <div className="partner-logo">
+                <img src={emaar} alt="Emaar" />
+              </div>
 
-    <div className="partners-heading">
-      <span>Our</span>
-      <h2>Partners</h2>
-    </div>
+              <div className="partner-logo">
+                <img src={embassy} alt="Embassy" />
+              </div>
 
-    <div className="partners-logos">
+              <div className="partner-logo">
+                <img src={kolte} alt="Partner" />
+              </div>
 
-      <div className="partner-logo">
-        <img
-          src={emaar}
-          alt="Emaar"
-        />
-      </div>
+              <div className="partner-logo">
+                <img src={myg} alt="Partner" />
+              </div>
 
-      <div className="partner-logo">
-        <img
-          src={embassy}
-          alt="Embassy"
-        />
-      </div>
+              <div className="partner-logo">
+                <img src={dubai} alt="Dubai" />
+              </div>
 
-      <div className="partner-logo">
-        <img
-          src={kolte}
-          alt="Partner"
-        />
-      </div>
+              <div className="partner-logo">
+                <img src={partner6} alt="Partner" />
+              </div>
+            </div>
+          </div>
 
-      <div className="partner-logo">
-        <img
-          src={myg}
-          alt="Partner"
-        />
-      </div>
+          {/* Floating Buttons */}
 
-      <div className="partner-logo">
-        <img
-          src={dubai}
-          alt="Dubai"
-        />
-      </div>
+          <div className="floating-buttons">
+            <button className="floating-button chat-button" aria-label="Chat">
+              <span>●</span>
+            </button>
 
-      <div className="partner-logo">
-        <img
-          src={partner6}
-          alt="Partner"
-        />
-      </div>
-
-    </div>
-
-  </div>
-
-
-  {/* Floating Buttons */}
-
-  <div className="floating-buttons">
-
-    <button
-      className="floating-button chat-button"
-      aria-label="Chat"
-    >
-      <span>●</span>
-    </button>
-
-    <button
-      className="floating-button top-button"
-      aria-label="Back to top"
-      onClick={() => window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      })}
-      
-    >
-      ↑
-    </button>
-
-  </div>
-
-</section>
-
+            <button
+              className="floating-button top-button"
+              aria-label="Back to top"
+              onClick={() =>
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                })
+              }
+            >
+              ↑
+            </button>
+          </div>
+        </section>
       </main>
 
       <Footer />
