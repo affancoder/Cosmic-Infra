@@ -2,19 +2,35 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../CSS/Home.css";
 
-import property1 from "../assets/images/property-1.jpg";
-import property2 from "../assets/images/property-2.jpg";
-import property3 from "../assets/images/property-3.jpg";
+import property1 from "../assets/images/sudarshan-1.jpg";
+import sudarshan2 from "../assets/images/sudarshan-2.jpg";
+
+import property2 from "../assets/images/shrimant.jpg";
+import tathastu1 from "../assets/images/tathastu-1.jpg";
+import tathastu2 from "../assets/images/tathastu-2.jpg";
+
+import onkar1 from "../assets/images/onkar1.jpg";
+import onkar2 from "../assets/images/onkar1.jpg";
+import onkar3 from "../assets/images/onkar1.jpg";
+import onkar4 from "../assets/images/onkar1.jpg";
+import sachivilla from "../assets/images/sachi-villa.jpg"
+import raavi from "../assets/images/raavi.jpg"
+import sweethome from "../assets/images/sweet-home.jpg"
+import vivek from "../assets/images/vivek.jpg"
+
 import client from "../assets/images/client.jpg";
 import apartment from "../assets/images/apartment.png";
 import house from "../assets/images/house.png";
 import office from "../assets/images/office.png";
 import newtownVilla from "../assets/images/newtown-villa.jpg";
 import categoryHouse from "../assets/images/category-house.jpg";
+
 import buyProperty from "../assets/images/service-sell.png";
 import sellProperty from "../assets/images/service-buy.png";
 import assetManagement from "../assets/images/service-management.png";
+
 import realtor from "../assets/images/realtor.jpg";
+
 import emaar from "../assets/images/emaar.png";
 import embassy from "../assets/images/embassy.png";
 import kolte from "../assets/images/kolte.png";
@@ -22,317 +38,697 @@ import myg from "../assets/images/myg.png";
 import dubai from "../assets/images/dubai.png";
 import partner6 from "../assets/images/partner-6.png";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 
 function Home() {
 
   const navigate = useNavigate();
 
+
+  /* =====================================
+     PROPERTY DATA
+  ===================================== */
+
   const properties = [
+
     {
       id: 1,
-      name: "CHITRAKUT HEIGHTS",
-      location: "Jaipur",
-      price: "₹75 Lakhs",
-      type: "2, 3 BHK Apartments",
-      image: property1,
-      developer: "Chitrakut Developers",
+
+      name: "SUDARSHAN",
+
+      location:
+        "Near Shankar Nagar Garden - Behind Apple iNspire Showroom",
+
+      price: "1,680 sq.ft",
+
+      type: "3 BHK",
+
+      images: [
+        property1,
+        sudarshan2,
+      ],
+
+      developer: "Signature Address",
     },
+
 
     {
       id: 2,
-      name: "BHAWANI NIVARA",
-      location: "Malad",
-      price: "₹52 Lakhs",
-      type: "2, 3 BHK Apartments",
-      image: property2,
-      developer: "Bhawani Group",
+
+      name: "SHRIMAT",
+
+      location:
+        "Residential 4BHK · Behind Jain Temple, Lendra Park, Ramdaspeth",
+
+      price: "2,930 sq.ft",
+
+      type: "4 BHK",
+
+      images: [
+        property2,
+      ],
+
+      developer: "Signature Address",
     },
+
 
     {
       id: 3,
-      name: "OTC CAPITAL CITY",
-      location: "Ahmedabad",
-      price: "₹25 Crore",
-      type: "3, 4 BHK Apartments",
-      image: property3,
-      developer: "OTC Developers",
+
+      name: "TATHASTU",
+
+      location:
+        "245 & 246, Shankar Nagar",
+
+      price: "2,150 sq.ft",
+
+      type: "3 BHK",
+
+      images: [
+        tathastu2,
+        tathastu1,
+      ],
+
+      developer: "Only 1st Floor Available",
     },
+
+
+    {
+      id: 4,
+
+      name: "ONKAR",
+
+      location:
+        "51, Kotwal Nagar - Near Orange City Square - Khamla",
+
+      price: "1,400 sq.ft",
+
+      type: "3 BHK",
+
+      images: [
+        onkar1,
+        onkar2,
+        onkar3,
+        onkar4,
+      ],
+
+      developer: "ONGOING",
+    },
+
+
+    {
+      id: 5,
+
+      name: "SACHI VILLA",
+
+      location:
+        "36, Pratap Nagar - 24 meter Main Road",
+
+      price: "2,400 sq.ft",
+
+      type: "Commercials",
+
+      images: [
+        sachivilla,
+      ],
+
+      developer: "ONGOING",
+    },
+
+
+    {
+      id: 6,
+
+      name: "RAAVI",
+
+      location:
+        "70, Pratap Nagar",
+
+      price: "1,700 sq.ft",
+
+      type: "3 BHK",
+
+      images: [
+        raavi,
+      ],
+
+      developer: "ONGOING",
+    },
+
+
+    {
+      id: 7,
+
+      name: "SWEET HOME",
+
+      location:
+        "19, Telecom Nagar, Near Dhomne Jewellers, Behind Manjiri Textiles",
+
+      price: "1,050 sq.ft",
+
+      type: "2 BHK",
+
+      images: [
+        sweethome,
+      ],
+
+      developer: "ONGOING",
+    },
+
+
+    {
+      id: 8,
+
+      name: "VIVEK",
+
+      location:
+        "135, Pandey Layout",
+
+      price: "1,350 sq.ft",
+
+      type: "3 BHK",
+
+      images: [
+        vivek,
+      ],
+
+      developer: "ONGOING",
+    },
+
   ];
 
 
+  /* =====================================
+     PROPERTY SHOWCASE STATE
+  ===================================== */
+
   const [activeProperty, setActiveProperty] = useState(0);
+
+  const [activePhoto, setActivePhoto] = useState(0);
+
+  const [thumbnailStart, setThumbnailStart] = useState(0);
+
   const [isPaused, setIsPaused] = useState(false);
 
 
-  const currentProperty = properties[activeProperty];
+  const currentProperty =
+    properties[activeProperty];
+
+
+  /* =====================================
+     CHANGE PROPERTY
+  ===================================== */
+
+  const handlePropertyChange = (index) => {
+
+    setActiveProperty(index);
+
+    setActivePhoto(0);
+
+    setIsPaused(false);
+
+  };
+
+
+  /* =====================================
+     PREVIOUS PROPERTY THUMBNAILS
+  ===================================== */
+
+  const handlePreviousProperties = () => {
+
+    setThumbnailStart((prev) => {
+
+      if (prev > 0) {
+        return prev - 1;
+      }
+
+      return Math.max(properties.length - 3, 0);
+
+    });
+
+  };
+
+
+  /* =====================================
+     NEXT PROPERTY THUMBNAILS
+  ===================================== */
+
+  const handleNextProperties = () => {
+
+    setThumbnailStart((prev) => {
+
+      if (prev < properties.length - 3) {
+        return prev + 1;
+      }
+
+      return 0;
+
+    });
+
+  };
+
+
+  /* =====================================
+     PREVIOUS PHOTO
+  ===================================== */
+
+  const handlePreviousPhoto = () => {
+
+    setActivePhoto((prev) => {
+
+      if (prev === 0) {
+        return currentProperty.images.length - 1;
+      }
+
+      return prev - 1;
+
+    });
+
+  };
+
+
+  /* =====================================
+     NEXT PHOTO
+  ===================================== */
+
+  const handleNextPhoto = () => {
+
+    setActivePhoto((prev) => {
+
+      if (
+        prev === currentProperty.images.length - 1
+      ) {
+        return 0;
+      }
+
+      return prev + 1;
+
+    });
+
+  };
+
+
+  /* =====================================
+     AUTO PHOTO SLIDER
+  ===================================== */
+
+  useEffect(() => {
+
+    if (isPaused) {
+      return;
+    }
+
+    if (currentProperty.images.length <= 1) {
+      return;
+    }
+
+    const timer = setInterval(() => {
+
+      setActivePhoto((prev) => {
+
+        if (
+          prev ===
+          currentProperty.images.length - 1
+        ) {
+          return 0;
+        }
+
+        return prev + 1;
+
+      });
+
+    }, 5000);
+
+
+    return () => clearInterval(timer);
+
+  }, [
+    activeProperty,
+    isPaused,
+    currentProperty.images.length,
+  ]);
+
 
   return (
     <>
       <Navbar />
 
       <main className="main-content">
+
+
+        {/* =====================================================
+            HERO SECTION
+        ===================================================== */}
+
         <section className="hero-section">
 
-  {/* KEEP YOUR EXISTING BACKGROUND */}
-  <div className="hero-overlay"></div>
+          <div className="hero-overlay"></div>
 
-  <div className="hero-content">
+          <div className="hero-content">
 
-    {/* =================================
-        HERO HEADING
-    ================================= */}
 
-    <div className="hero-heading">
+            {/* =================================
+                HERO HEADING
+            ================================= */}
 
-      <h1>
-        Properties to buy in Bengaluru
-      </h1>
+            <div className="hero-heading">
 
-      <p>
-        5K+ listings added daily and 77K+ total verified
-      </p>
+              <h1>
+                Properties to buy in Bengaluru
+              </h1>
 
-    </div>
+              <p>
+                5K+ listings added daily and 77K+
+                total verified
+              </p>
 
+            </div>
 
-    {/* =================================
-        PROPERTY SEARCH PANEL
-    ================================= */}
 
-    <div className="property-search-panel">
+            {/* =================================
+                PROPERTY SEARCH PANEL
+            ================================= */}
 
-      {/* SEARCH TABS */}
+            <div className="property-search-panel">
 
-      <div className="property-tabs">
 
-        <button className="property-tab active">
-          BUY
-        </button>
+              {/* SEARCH TABS */}
 
-        <button className="property-tab">
-          RENT
-        </button>
+              <div className="property-tabs">
 
-        <button className="property-tab">
-          COMMERCIAL
-        </button>
+                <button
+                  className="property-tab active"
+                  type="button"
+                >
+                  BUY
+                </button>
 
-        <button className="property-tab">
-          PG/CO-LIVING
-        </button>
+                <button
+                  className="property-tab"
+                  type="button"
+                >
+                  RENT
+                </button>
 
-        <button className="property-tab">
-          PLOTS
-        </button>
+                <button
+                  className="property-tab"
+                  type="button"
+                >
+                  COMMERCIAL
+                </button>
 
-      </div>
+                <button
+                  className="property-tab"
+                  type="button"
+                >
+                  PG/CO-LIVING
+                </button>
 
+                <button
+                  className="property-tab"
+                  type="button"
+                >
+                  PLOTS
+                </button>
 
-      {/* MAIN SEARCH */}
+              </div>
 
-      <div className="property-main-search">
 
-        <div className="property-input">
+              {/* MAIN SEARCH */}
 
-          <span className="property-search-icon">
-            🔍
-          </span>
+              <div className="property-main-search">
 
-          <input
-            type="text"
-            placeholder="Search for locality, landmark, project, or builder"
-          />
-
-        </div>
-
-        <button className="property-search-button">
-          Search
-        </button>
-
-      </div>
-
-    </div>
-
-
-    {/* =================================
-        POPULAR LOCALITIES
-    ================================= */}
-
-    <div className="popular-localities">
-
-      <div className="popular-title">
-
-        <span className="popular-icon">
-          📍
-        </span>
-
-        <strong>
-          Popular Localities
-        </strong>
-
-      </div>
-
-
-      <div className="locality-list">
-
-        <button className="locality-item">
-          Nasik
-          <span>›</span>
-        </button>
-
-        <button className="locality-item">
-          Latino
-          <span>›</span>
-        </button>
-
-        <button className="locality-item">
-          Daniel City
-          <span>›</span>
-        </button>
-
-        <button className="locality-item">
-          Malaad 
-          <span>›</span>
-        </button>
-
-        <button className="locality-item">
-          Pune
-          <span>›</span>
-        </button>
-
-        <button className="locality-next">
-          ›
-        </button>
-
-      </div>
-
-    </div>
-
-
-    {/* =================================
-        PROPERTY OWNER CTA
-    ================================= */}
-
-    <div className="property-owner-cta">
-
-      <span className="owner-sparkle">
-        ✦
-      </span>
-
-      <span>
-        Are you a Property Owner?
-      </span>
-
-      <strong>
-        Sell / Rent for FREE
-      </strong>
-
-      <span className="owner-arrow">
-        ›
-      </span>
-
-    </div>
-
-  </div>
-
-        </section>
-
-        {/* Recent Properties Section */}
-
-        <section className="showcase-properties">
-
-      {/* =================================
-          SECTION HEADER
-      ================================= */}
-
-      <div className="showcase-header">
-
-        <div className="showcase-title">
-
-          <h2>
-            Our Portfolio
-          </h2>
-
-          {/* <p>
-            Explore top living options with us
-          </p> */}
-
-        </div>
-
-
-        {/* =================================
-            PROPERTY THUMBNAILS
-        ================================= */}
-
-        <div className="showcase-thumbnails">
-
-          {properties.map((property, index) => (
+                <div className="property-input">
+
+                  <span className="property-search-icon">
+                    🔍
+                  </span>
+
+                  <input
+                    type="text"
+                    placeholder="Search for locality, landmark, project, or builder"
+                  />
+
+                </div>
+
+
+                <button
+                  type="button"
+                  className="property-search-button"
+                  onClick={() =>
+                    navigate("/properties")
+                  }
+                >
+                  Search
+                </button>
+
+              </div>
+
+            </div>
+
+
+            {/* =================================
+                POPULAR LOCALITIES
+            ================================= */}
+
+            <div className="popular-localities">
+
+              <div className="popular-title">
+
+                <span className="popular-icon">
+                  📍
+                </span>
+
+                <strong>
+                  Popular Localities
+                </strong>
+
+              </div>
+
+
+              <div className="locality-list">
+
+                <button
+                  type="button"
+                  className="locality-item"
+                  onClick={() =>
+                    navigate("/properties")
+                  }
+                >
+                  Nasik
+                  <span>›</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="locality-item"
+                  onClick={() =>
+                    navigate("/properties")
+                  }
+                >
+                  Latino
+                  <span>›</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="locality-item"
+                  onClick={() =>
+                    navigate("/properties")
+                  }
+                >
+                  Daniel City
+                  <span>›</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="locality-item"
+                  onClick={() =>
+                    navigate("/properties")
+                  }
+                >
+                  Malaad
+                  <span>›</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="locality-item"
+                  onClick={() =>
+                    navigate("/properties")
+                  }
+                >
+                  Pune
+                  <span>›</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="locality-next"
+                  onClick={() =>
+                    navigate("/properties")
+                  }
+                >
+                  ›
+                </button>
+
+              </div>
+
+            </div>
+
+
+            {/* =================================
+                PROPERTY OWNER CTA
+            ================================= */}
 
             <button
-              key={property.id}
               type="button"
-              className={`showcase-thumbnail ${
-                activeProperty === index ? "active" : ""
-              }`}
-              onClick={() => {
-                setActiveProperty(index);
-                setIsPaused(false);
-              }}
+              className="property-owner-cta"
+              onClick={() =>
+                navigate("/contact")
+              }
             >
 
-              <img
-                src={property.image}
-                alt={property.name}
-              />
+              <span className="owner-sparkle">
+                ✦
+              </span>
 
               <span>
-                {property.name}
+                Are you a Property Owner?
+              </span>
+
+              <strong>
+                Sell / Rent for FREE
+              </strong>
+
+              <span className="owner-arrow">
+                ›
               </span>
 
             </button>
 
-          ))}
+          </div>
 
-        </div>
-
-      </div>
+        </section>
 
 
-      {/* =================================
-          MAIN SHOWCASE
-      ================================= */}
+        {/* =====================================================
+            PROPERTY SHOWCASE
+        ===================================================== */}
 
-      <div className="showcase-card">
-
-
-        {/* =================================
-            LEFT PROPERTY INFORMATION
-        ================================= */}
-
-        <div className="showcase-info">
+        <section className="showcase-properties">
 
 
-          {/* Developer */}
+          {/* =================================
+              SECTION HEADER
+          ================================= */}
 
-          <div className="showcase-developer">
+          <div className="showcase-header">
 
-            <div className="developer-logo">
-              ✦
+
+            <div className="showcase-title">
+
+              <h2>
+                <span style={{ color: "#333" }}>
+                  Our
+                </span>{" "}
+                Portfolio
+              </h2>
+
             </div>
 
-            <div>
 
-              <strong>
-                {currentProperty.developer}
-              </strong>
+            {/* =================================
+                PROPERTY THUMBNAIL CAROUSEL
+            ================================= */}
+
+            <div className="showcase-thumbnail-wrapper">
+
+
+              {/* PREVIOUS */}
 
               <button
                 type="button"
-                onClick={() => navigate("/properties")}
+                className="showcase-thumb-arrow"
+                onClick={
+                  handlePreviousProperties
+                }
+                aria-label="Previous properties"
               >
-                View Projects
+                ‹
+              </button>
+
+
+              {/* THUMBNAILS */}
+
+              <div className="showcase-thumbnails">
+
+                {properties
+                  .slice(
+                    thumbnailStart,
+                    thumbnailStart + 3
+                  )
+                  .map((property) => {
+
+                    const actualIndex =
+                      properties.findIndex(
+                        (item) =>
+                          item.id === property.id
+                      );
+
+
+                    return (
+
+                      <button
+                        key={property.id}
+                        type="button"
+                        className={`showcase-thumbnail ${
+                          activeProperty ===
+                          actualIndex
+                            ? "active"
+                            : ""
+                        }`}
+                        onClick={() =>
+                          handlePropertyChange(
+                            actualIndex
+                          )
+                        }
+                      >
+
+                        <img
+                          src={
+                            property.images[0]
+                          }
+                          alt={property.name}
+                        />
+
+                        <span>
+                          {property.name}
+                        </span>
+
+                      </button>
+
+                    );
+
+                  })}
+
+              </div>
+
+
+              {/* NEXT */}
+
+              <button
+                type="button"
+                className="showcase-thumb-arrow"
+                onClick={
+                  handleNextProperties
+                }
+                aria-label="Next properties"
+              >
+                ›
               </button>
 
             </div>
@@ -340,442 +736,919 @@ function Home() {
           </div>
 
 
-          {/* Property Details */}
+          {/* =================================
+              MAIN SHOWCASE
+          ================================= */}
 
-          <div className="showcase-details">
-
-            <h3>
-              {currentProperty.name}
-            </h3>
-
-            <p className="showcase-location">
-              📍 {currentProperty.location}
-            </p>
+          <div className="showcase-card">
 
 
-            <div className="showcase-price">
+            {/* =================================
+                LEFT PROPERTY INFORMATION
+            ================================= */}
 
-              <strong>
-                {currentProperty.price}
-              </strong>
+            <div className="showcase-info">
 
-              <span>
-                {currentProperty.type}
-              </span>
+
+              {/* DEVELOPER */}
+
+              <div className="showcase-developer">
+
+                <div className="developer-logo">
+                  ✦
+                </div>
+
+
+                <div>
+
+                  <strong>
+                    {currentProperty.developer}
+                  </strong>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      navigate("/properties")
+                    }
+                  >
+                    View Projects
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              {/* PROPERTY DETAILS */}
+
+              <div className="showcase-details">
+
+                <h3>
+                  {currentProperty.name}
+                </h3>
+
+                <p className="showcase-location">
+                  📍 {currentProperty.location}
+                </p>
+
+
+                <div className="showcase-price">
+
+                  <strong>
+                    {currentProperty.price}
+                  </strong>
+
+                  <span>
+                    {currentProperty.type}
+                  </span>
+
+                </div>
+
+                <strong className="available">Available</strong>
+
+              </div>
+
+
+              {/* CONTACT */}
+
+              <button
+                type="button"
+                className="showcase-contact"
+                onClick={() =>
+                  navigate("/contact")
+                }
+              >
+                Contact
+              </button>
+
+            </div>
+
+
+            {/* =================================
+                LARGE PROPERTY IMAGE CAROUSEL
+            ================================= */}
+
+            <div className="showcase-image">
+
+
+              <img
+                key={`${currentProperty.id}-${activePhoto}`}
+                src={
+                  currentProperty.images[
+                    activePhoto
+                  ]
+                }
+                alt={`${currentProperty.name} ${
+                  activePhoto + 1
+                }`}
+              />
+
+
+              {/* IMAGE PREVIOUS */}
+
+              {currentProperty.images.length >
+                1 && (
+
+                <button
+                  type="button"
+                  className="showcase-image-arrow showcase-image-prev"
+                  onClick={
+                    handlePreviousPhoto
+                  }
+                  aria-label="Previous photo"
+                >
+                  ‹
+                </button>
+
+              )}
+
+
+              {/* IMAGE NEXT */}
+
+              {currentProperty.images.length >
+                1 && (
+
+                <button
+                  type="button"
+                  className="showcase-image-arrow showcase-image-next"
+                  onClick={
+                    handleNextPhoto
+                  }
+                  aria-label="Next photo"
+                >
+                  ›
+                </button>
+
+              )}
+
+
+              {/* PAUSE / PLAY */}
+
+              <button
+                type="button"
+                className="showcase-pause"
+                onClick={() =>
+                  setIsPaused(!isPaused)
+                }
+                aria-label={
+                  isPaused
+                    ? "Play property showcase"
+                    : "Pause property showcase"
+                }
+              >
+                {isPaused
+                  ? "▶"
+                  : "Ⅱ"}
+              </button>
+
+
+              {/* PHOTO COUNTER */}
+
+              <div className="showcase-image-overlay">
+
+                <span>
+                  {activePhoto + 1} /{" "}
+                  {currentProperty.images.length}
+                </span>
+
+              </div>
+
+
+              {/* PHOTO DOTS */}
+
+              {currentProperty.images.length >
+                1 && (
+
+                <div className="showcase-photo-dots">
+
+                  {currentProperty.images.map(
+                    (_, index) => (
+
+                      <button
+                        key={index}
+                        type="button"
+                        className={
+                          activePhoto === index
+                            ? "active"
+                            : ""
+                        }
+                        onClick={() =>
+                          setActivePhoto(
+                            index
+                          )
+                        }
+                        aria-label={`View photo ${
+                          index + 1
+                        }`}
+                      />
+
+                    )
+                  )}
+
+                </div>
+
+              )}
 
             </div>
 
           </div>
 
-
-          {/* Contact */}
-
-          <button
-            type="button"
-            className="showcase-contact"
-            onClick={() => navigate("/contact")}
-          >
-            Contact
-          </button>
-
-        </div>
+        </section>
 
 
-        {/* =================================
-            LARGE PROPERTY IMAGE
-        ================================= */}
-
-        <div className="showcase-image">
-
-          <img
-            src={currentProperty.image}
-            alt={currentProperty.name}
-          />
-
-
-          {/* Pause */}
-
-          <button
-            type="button"
-            className="showcase-pause"
-            onClick={() => setIsPaused(!isPaused)}
-            aria-label={
-              isPaused
-                ? "Play property showcase"
-                : "Pause property showcase"
-            }
-          >
-            {isPaused ? "▶" : "Ⅱ"}
-          </button>
-
-
-          {/* Image overlay */}
-
-          <div className="showcase-image-overlay">
-            <span>
-              {activeProperty + 1} / {properties.length}
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-        {/* Client Testimonial Section */}
+        {/* =====================================================
+            CLIENT TESTIMONIAL
+        ===================================================== */}
 
         <section className="testimonial-section">
+
           <div className="testimonial-heading">
-            <h2>What's Client Say</h2>
+            <h2>
+              What's Client Say
+            </h2>
           </div>
+
 
           <div className="testimonial-content">
-            {/* Quote */}
+
             <div className="testimonial-quote">
-              <span>"</span>
+              <span>
+                "
+              </span>
             </div>
 
-            {/* Left Arrow */}
-            <button className="testimonial-arrow left-arrow">‹</button>
 
-            {/* Testimonial Text */}
+            <button
+              type="button"
+              className="testimonial-arrow left-arrow"
+            >
+              ‹
+            </button>
+
+
             <div className="testimonial-text">
-              <h3>Bliss Residency, Aydar</h3>
+
+              <h3>
+                Bliss Residency, Aydar
+              </h3>
 
               <p>
-                "I am extremely happy with my experience. The attention to
-                detail and professionalism made my home buying journey smooth
-                and stress-free. I highly recommend their services!"
+                "I am extremely happy with my
+                experience. The attention to detail
+                and professionalism made my home
+                buying journey smooth and
+                stress-free. I highly recommend
+                their services!"
               </p>
+
             </div>
 
-            {/* Client Image */}
+
             <div className="client-image">
-              <img src={client} alt="Client" />
+
+              <img
+                src={client}
+                alt="Client"
+              />
+
             </div>
 
-            {/* Client Details */}
+
             <div className="client-details">
-              <h4>John</h4>
-              <p>Business</p>
-              <p>Engineer</p>
+
+              <h4>
+                John
+              </h4>
+
+              <p>
+                Business
+              </p>
+
+              <p>
+                Engineer
+              </p>
+
             </div>
 
-            {/* Right Arrow */}
-            <button className="testimonial-arrow right-arrow">›</button>
+
+            <button
+              type="button"
+              className="testimonial-arrow right-arrow"
+            >
+              ›
+            </button>
+
           </div>
 
-          {/* Slider Line */}
+
           <div className="testimonial-slider">
             <span></span>
           </div>
+
         </section>
 
-        {/* What Are You Looking For Section */}
+
+        {/* =====================================================
+            LOOKING FOR
+        ===================================================== */}
 
         <div className="looking-heading">
-          <p>WE'RE HERE TO HELP YOU</p>
-          <h2>WHAT ARE YOU LOOKING FOR?</h2>
+
+          <p>
+            WE'RE HERE TO HELP YOU
+          </p>
+
+          <h2>
+            WHAT ARE YOU LOOKING FOR?
+          </h2>
+
         </div>
 
+
         <section className="looking-section">
+
           <div className="looking-cards">
-            {/* Apartments */}
+
+
+            {/* APARTMENTS */}
+
             <div className="looking-card">
+
               <div className="looking-image">
-                <img src={apartment} alt="Apartments" />
+
+                <img
+                  src={apartment}
+                  alt="Apartments"
+                />
+
               </div>
 
               <div className="looking-info">
-                <h3>APARTMENTS</h3>
+
+                <h3>
+                  APARTMENTS
+                </h3>
 
                 <p>
-                  Find modern apartments designed for comfortable living with
-                  excellent amenities and convenient locations.
+                  Find modern apartments designed
+                  for comfortable living with
+                  excellent amenities and convenient
+                  locations.
                 </p>
+
               </div>
+
             </div>
 
-            {/* Houses */}
+
+            {/* HOUSES */}
+
             <div className="looking-card">
+
               <div className="looking-image">
-                <img src={house} alt="Houses" />
+
+                <img
+                  src={house}
+                  alt="Houses"
+                />
+
               </div>
 
               <div className="looking-info">
-                <h3>HOUSES</h3>
+
+                <h3>
+                  HOUSES
+                </h3>
 
                 <p>
-                  Discover beautiful homes with spacious layouts, premium
-                  surroundings and everything your family needs.
+                  Discover beautiful homes with
+                  spacious layouts, premium
+                  surroundings and everything your
+                  family needs.
                 </p>
+
               </div>
+
             </div>
 
-            {/* Offices */}
+
+            {/* OFFICES */}
+
             <div className="looking-card">
+
               <div className="looking-image">
-                <img src={office} alt="Offices" />
+
+                <img
+                  src={office}
+                  alt="Offices"
+                />
+
               </div>
 
               <div className="looking-info">
-                <h3>OFFICES</h3>
+
+                <h3>
+                  OFFICES
+                </h3>
 
                 <p>
-                  Explore professional office spaces in prime locations suitable
+                  Explore professional office
+                  spaces in prime locations suitable
                   for businesses of every size.
                 </p>
+
               </div>
+
             </div>
+
           </div>
+
         </section>
+
 
         <div className="bottom-gap"></div>
 
-        {/* Categories Section */}
+
+        {/* =====================================================
+            CATEGORIES
+        ===================================================== */}
 
         <div className="category-top">
-          <img src={newtownVilla} alt="House" />
+
+          <img
+            src={newtownVilla}
+            alt="House"
+          />
 
           <div className="categories-heading">
-            <p>FIND YOUR PERFECT HOME</p>
-            <h2>CATEGORIES</h2>
+
+            <p>
+              FIND YOUR PERFECT HOME
+            </p>
+
+            <h2>
+              CATEGORIES
+            </h2>
+
           </div>
+
         </div>
 
+
         <section className="categories-section">
+
           <div className="categories-container">
+
             <div className="categories-grid">
-              {/* House */}
+
+
+              {/* HOUSE */}
+
               <div className="category-card">
+
                 <div className="category-image">
-                  <img src={categoryHouse} alt="House" />
+
+                  <img
+                    src={categoryHouse}
+                    alt="House"
+                  />
 
                   <div className="category-image-overlay"></div>
 
-                  <h3>House</h3>
+                  <h3>
+                    House
+                  </h3>
+
                 </div>
 
                 <div className="category-content">
+
                   <p>
-                    GET YOUR DREAM HOME TODAY. WE ARE HERE TO HELP YOU FIND THE
-                    PERFECT HOUSE WITH GREAT LOCATIONS AND MODERN AMENITIES.
+                    GET YOUR DREAM HOME TODAY.
+                    WE ARE HERE TO HELP YOU FIND
+                    THE PERFECT HOUSE WITH GREAT
+                    LOCATIONS AND MODERN AMENITIES.
                   </p>
+
                 </div>
+
               </div>
 
-              {/* Office */}
+
+              {/* OFFICE */}
+
               <div className="category-card">
+
                 <div className="category-image">
-                  <img src={categoryHouse} alt="Office" />
+
+                  <img
+                    src={categoryHouse}
+                    alt="Office"
+                  />
 
                   <div className="category-image-overlay"></div>
 
-                  <h3>Office</h3>
+                  <h3>
+                    Office
+                  </h3>
+
                 </div>
 
                 <div className="category-content">
+
                   <p>
-                    FIND YOUR IDEAL WORKSPACE WITH PREMIUM LOCATIONS, MODERN
-                    FACILITIES AND FLEXIBLE OPTIONS FOR YOUR BUSINESS.
+                    FIND YOUR IDEAL WORKSPACE WITH
+                    PREMIUM LOCATIONS, MODERN
+                    FACILITIES AND FLEXIBLE OPTIONS
+                    FOR YOUR BUSINESS.
                   </p>
+
                 </div>
+
               </div>
 
-              {/* Land */}
+
+              {/* LAND */}
+
               <div className="category-card">
+
                 <div className="category-image">
-                  <img src={categoryHouse} alt="Land" />
+
+                  <img
+                    src={categoryHouse}
+                    alt="Land"
+                  />
 
                   <div className="category-image-overlay"></div>
 
-                  <h3>Land</h3>
+                  <h3>
+                    Land
+                  </h3>
+
                 </div>
 
                 <div className="category-content">
+
                   <p>
-                    THE RIGHT LAND CAN BE A GREAT INVESTMENT. EXPLORE PRIME
-                    LOCATIONS SUITABLE FOR RESIDENTIAL AND COMMERCIAL PURPOSES.
+                    THE RIGHT LAND CAN BE A GREAT
+                    INVESTMENT. EXPLORE PRIME
+                    LOCATIONS SUITABLE FOR
+                    RESIDENTIAL AND COMMERCIAL
+                    PURPOSES.
                   </p>
+
                 </div>
+
               </div>
 
-              {/* Villa */}
+
+              {/* VILLA */}
+
               <div className="category-card">
+
                 <div className="category-image">
-                  <img src={categoryHouse} alt="Villa" />
+
+                  <img
+                    src={categoryHouse}
+                    alt="Villa"
+                  />
 
                   <div className="category-image-overlay"></div>
 
-                  <h3>Villa</h3>
+                  <h3>
+                    Villa
+                  </h3>
+
                 </div>
 
                 <div className="category-content">
+
                   <p>
-                    ENJOY LUXURY LIVING IN BEAUTIFUL VILLAS WITH SPACIOUS
-                    INTERIORS, PREMIUM AMENITIES AND PEACEFUL SURROUNDINGS.
+                    ENJOY LUXURY LIVING IN BEAUTIFUL
+                    VILLAS WITH SPACIOUS INTERIORS,
+                    PREMIUM AMENITIES AND PEACEFUL
+                    SURROUNDINGS.
                   </p>
+
                 </div>
+
               </div>
 
-              {/* Shop */}
+
+              {/* SHOP */}
+
               <div className="category-card">
+
                 <div className="category-image">
-                  <img src={categoryHouse} alt="Shop" />
+
+                  <img
+                    src={categoryHouse}
+                    alt="Shop"
+                  />
 
                   <div className="category-image-overlay"></div>
 
-                  <h3>Shop</h3>
+                  <h3>
+                    Shop
+                  </h3>
+
                 </div>
 
                 <div className="category-content">
+
                   <p>
-                    FIND COMMERCIAL SPACES IN PRIME LOCATIONS THAT HELP YOUR
-                    BUSINESS GROW AND ATTRACT MORE CUSTOMERS.
+                    FIND COMMERCIAL SPACES IN PRIME
+                    LOCATIONS THAT HELP YOUR BUSINESS
+                    GROW AND ATTRACT MORE CUSTOMERS.
                   </p>
+
                 </div>
+
               </div>
 
-              {/* Lease */}
+
+              {/* LEASE */}
+
               <div className="category-card">
+
                 <div className="category-image">
-                  <img src={categoryHouse} alt="Lease" />
+
+                  <img
+                    src={categoryHouse}
+                    alt="Lease"
+                  />
 
                   <div className="category-image-overlay"></div>
 
-                  <h3>Lease</h3>
+                  <h3>
+                    Lease
+                  </h3>
+
                 </div>
 
                 <div className="category-content">
+
                   <p>
-                    ACQUIRE PROPERTY ON LEASE AND CHOOSE FROM A WIDE RANGE OF
-                    RESIDENTIAL AND COMMERCIAL OPTIONS.
+                    ACQUIRE PROPERTY ON LEASE AND
+                    CHOOSE FROM A WIDE RANGE OF
+                    RESIDENTIAL AND COMMERCIAL
+                    OPTIONS.
                   </p>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </section>
 
-        {/* Our Services Section */}
+
+        {/* =====================================================
+            SERVICES
+        ===================================================== */}
 
         <section className="cosmic-services-section">
-          {/* Section Heading */}
+
           <div className="cosmic-services-heading">
-            <span>Check Out</span>
-            <h2>Our Services</h2>
+
+            <span>
+              Check Out
+            </span>
+
+            <h2>
+              Our Services
+            </h2>
+
           </div>
 
-          {/* Services Cards */}
+
           <div className="cosmic-services-cards">
-            {/* Buy Property */}
+
+
+            {/* BUY */}
+
             <div className="cosmic-service-card">
-              <img src={buyProperty} alt="Buy Property" />
+
+              <img
+                src={buyProperty}
+                alt="Buy Property"
+              />
 
               <div className="cosmic-service-overlay">
-                <h3>Buy Property</h3>
+
+                <h3>
+                  Buy Property
+                </h3>
+
               </div>
+
             </div>
 
-            {/* Sell Property */}
+
+            {/* SELL */}
+
             <div className="cosmic-service-card">
-              <img src={sellProperty} alt="Sell Property" />
+
+              <img
+                src={sellProperty}
+                alt="Sell Property"
+              />
 
               <div className="cosmic-service-overlay">
-                <h3>Sell Property</h3>
+
+                <h3>
+                  Sell Property
+                </h3>
+
               </div>
+
             </div>
 
-            {/* Asset Management */}
+
+            {/* MANAGEMENT */}
+
             <div className="cosmic-service-card">
-              <img src={assetManagement} alt="Asset Management" />
+
+              <img
+                src={assetManagement}
+                alt="Asset Management"
+              />
 
               <div className="cosmic-service-overlay">
-                <h3>Asset Management</h3>
+
+                <h3>
+                  Asset Management
+                </h3>
+
               </div>
+
             </div>
+
           </div>
+
         </section>
 
-        {/* AR REALTOR SECTION */}
+
+        {/* =====================================================
+            REALTOR
+        ===================================================== */}
 
         <section className="realtor-section">
+
           <div className="realtor-container">
-            {/* Left Content */}
+
+
             <div className="realtor-content">
-              <h2>We are Cosmic Infra</h2>
+
+              <h2>
+                We are Cosmic Infra
+              </h2>
 
               <p>
-                Welcome to Property Street, your gateway to a world of
-                exceptional real estate opportunities. At Property Street, we
-                understand that finding the perfect home or investment property
-                is more than a transaction—it's a significant milestone in your
-                life.
+                Welcome to Property Street, your
+                gateway to a world of exceptional
+                real estate opportunities. At Property
+                Street, we understand that finding the
+                perfect home or investment property is
+                more than a transaction—it's a
+                significant milestone in your life.
               </p>
 
               <p>
-                Our platform is designed to simplify your property search,
-                offering a seamless experience to explore a diverse range of
-                apartments, villas, plots and more.
+                Our platform is designed to simplify
+                your property search, offering a
+                seamless experience to explore a
+                diverse range of apartments, villas,
+                plots and more.
               </p>
 
-              <button className="realtor-button">Read more</button>
+              <button
+                type="button"
+                className="realtor-button"
+                onClick={() =>
+                  navigate("/about")
+                }
+              >
+                Read more
+              </button>
+
             </div>
 
-            {/* Right Image */}
+
             <div className="realtor-image">
-              <img src={realtor} alt="AR Realtor" />
+
+              <img
+                src={realtor}
+                alt="AR Realtor"
+              />
+
             </div>
+
           </div>
+
         </section>
 
-        {/* =========================
-    PARTNERS SECTION
-========================= */}
+
+        {/* =====================================================
+            PARTNERS
+        ===================================================== */}
 
         <section className="partners-section">
+
           <div className="partners-container">
+
+
             <div className="partners-heading">
-              <span>Our</span>
-              <h2>Partners</h2>
+
+              <span>
+                Our
+              </span>
+
+              <h2>
+                Partners
+              </h2>
+
             </div>
+
 
             <div className="partners-logos">
-              <div className="partner-logo">
-                <img src={emaar} alt="Emaar" />
-              </div>
+
 
               <div className="partner-logo">
-                <img src={embassy} alt="Embassy" />
+                <img
+                  src={emaar}
+                  alt="Emaar"
+                />
               </div>
 
-              <div className="partner-logo">
-                <img src={kolte} alt="Partner" />
-              </div>
 
               <div className="partner-logo">
-                <img src={myg} alt="Partner" />
+                <img
+                  src={embassy}
+                  alt="Embassy"
+                />
               </div>
 
-              <div className="partner-logo">
-                <img src={dubai} alt="Dubai" />
-              </div>
 
               <div className="partner-logo">
-                <img src={partner6} alt="Partner" />
+                <img
+                  src={kolte}
+                  alt="Kolte"
+                />
               </div>
+
+
+              <div className="partner-logo">
+                <img
+                  src={myg}
+                  alt="MYG"
+                />
+              </div>
+
+
+              <div className="partner-logo">
+                <img
+                  src={dubai}
+                  alt="Dubai"
+                />
+              </div>
+
+
+              <div className="partner-logo">
+                <img
+                  src={partner6}
+                  alt="Partner"
+                />
+              </div>
+
             </div>
+
           </div>
 
-          {/* Floating Buttons */}
+
+          {/* FLOATING BUTTONS */}
 
           <div className="floating-buttons">
-            <button className="floating-button chat-button" aria-label="Chat">
-              <span>●</span>
-            </button>
 
             <button
+              type="button"
+              className="floating-button chat-button"
+              aria-label="Chat"
+              onClick={() =>
+                navigate("/contact")
+              }
+            >
+              <span>
+                ●
+              </span>
+            </button>
+
+
+            <button
+              type="button"
               className="floating-button top-button"
               aria-label="Back to top"
               onClick={() =>
@@ -787,13 +1660,18 @@ function Home() {
             >
               ↑
             </button>
+
           </div>
+
         </section>
+
       </main>
 
       <Footer />
+
     </>
   );
 }
+
 
 export default Home;

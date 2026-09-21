@@ -759,15 +759,6 @@
   letter-spacing: -0.5px;
 }
 
-.showcase-title p {
-  margin-top: 8px;
-
-  color: #777777;
-
-  font-size: 15px;
-}
-
-
 /* =====================================
    THUMBNAILS
 ===================================== */
@@ -877,12 +868,11 @@
   position: relative;
 
   width: 100%;
-
-  min-height: 375px;
+  height: 600px;
 
   display: grid;
 
-  grid-template-columns: 295px 1fr;
+  grid-template-columns: 1fr 1fr;
 
   overflow: hidden;
 
@@ -1055,7 +1045,7 @@
 }
 
 .showcase-contact:hover {
-  background: #5520b5;
+  background: #cda858;
 
   transform: translateY(-1px);
 }
@@ -1213,7 +1203,7 @@
 
 
   .showcase-thumbnail {
-    width: 125px;
+    width: 100px;
   }
 
   .showcase-thumbnail img {
@@ -1303,6 +1293,1074 @@
 
   .showcase-image img {
     min-height: 230px;
+  }
+
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.showcase-header {
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =====================================
+   THUMBNAIL WRAPPER
+===================================== */
+
+.showcase-thumbnail-wrapper {
+  width: 510px;
+  max-width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+
+/* =====================================
+   THUMBNAIL VIEWPORT
+===================================== */
+
+.showcase-thumbnails {
+  width: 450px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================
+   THUMBNAIL
+===================================== */
+
+.showcase-thumbnail {
+  width: 143px;
+  min-width: 143px;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  text-align: left;
+
+  color: #777;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+
+/* =====================================
+   THUMBNAIL IMAGE
+===================================== */
+
+.showcase-thumbnail img {
+  width: 143px;
+  height: 84px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border: 2px solid transparent;
+
+  border-radius: 6px;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =====================================
+   THUMBNAIL NAME
+===================================== */
+
+.showcase-thumbnail span {
+  width: 100%;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  font-size: 13px;
+
+  line-height: 20px;
+
+  color: #777;
+}
+
+
+/* =====================================
+   ACTIVE
+===================================== */
+
+.showcase-thumbnail.active img {
+  border-color: #cda858;
+}
+
+.showcase-thumbnail.active span {
+  color: #cda858;
+
+  font-weight: 700;
+}
+
+
+/* =====================================
+   HOVER
+===================================== */
+
+.showcase-thumbnail:hover img {
+  transform: translateY(-2px);
+}
+
+
+/* =====================================
+   CAROUSEL ARROWS
+===================================== */
+
+.showcase-thumb-arrow {
+  width: 28px;
+  height: 28px;
+  margin-top: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #333;
+
+  background: #f1f1f1;
+
+  border: none;
+
+  border-radius: 50%;
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.showcase-thumb-arrow:hover {
+  color: #fff;
+
+  background: #cda858;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   IMPORTANT:
+   - Does NOT change desktop layout
+   - Does NOT change existing structure
+   - Does NOT change routes/functionality
+   - Only adjusts sizing/spacing for smaller screens
+========================================================= */
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOPS
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .hero-content {
+    width: 92%;
+  }
+
+  .property-search-panel {
+    width: 100%;
+  }
+
+  .showcase-properties {
+    width: 92%;
+  }
+
+  .showcase-card {
+    grid-template-columns: 35% 65%;
+  }
+
+  .showcase-info {
+    padding: 35px 28px;
+  }
+
+  .showcase-thumbnail-wrapper {
+    max-width: 55%;
+  }
+
+  .showcase-thumbnails {
+    width: 360px;
+  }
+
+  .showcase-thumbnail {
+    width: 110px;
+  }
+
+  .testimonial-content {
+    gap: 25px;
+  }
+
+  .looking-section,
+  .categories-section,
+  .cosmic-services-section,
+  .realtor-section,
+  .partners-section {
+    width: 92%;
+  }
+
+}
+
+
+/* =========================================================
+   TABLETS
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+  /* -----------------------------------------
+     HERO
+  ----------------------------------------- */
+
+  .hero-section {
+    min-height: 650px;
+  }
+
+  .hero-content {
+    width: 92%;
+  }
+
+  .hero-heading h1 {
+    font-size: clamp(36px, 6vw, 58px);
+  }
+
+  .property-search-panel {
+    padding: 20px;
+  }
+
+  .property-tabs {
+    gap: 20px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .property-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .property-tab {
+    flex-shrink: 0;
+  }
+
+
+  /* -----------------------------------------
+     POPULAR LOCALITIES
+  ----------------------------------------- */
+
+  .popular-localities {
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+
+  .locality-list {
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .locality-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .locality-item {
+    flex-shrink: 0;
+  }
+
+
+  /* -----------------------------------------
+     SHOWCASE
+  ----------------------------------------- */
+
+  .showcase-properties {
+    width: 92%;
+  }
+
+  .showcase-header {
+    gap: 20px;
+  }
+
+  .showcase-title h2 {
+    font-size: 34px;
+  }
+
+  .showcase-thumbnail-wrapper {
+    max-width: 60%;
+  }
+
+  .showcase-thumbnails {
+    width: 300px;
+  }
+
+  .showcase-thumbnail {
+    width: 90px;
+    height: 65px;
+  }
+
+  .showcase-card {
+    grid-template-columns: 40% 60%;
+  }
+
+  .showcase-info {
+    padding: 30px 22px;
+  }
+
+  .showcase-details h3 {
+    font-size: 28px;
+  }
+
+  .showcase-location {
+    font-size: 13px;
+  }
+
+  .showcase-large-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  /* -----------------------------------------
+     TESTIMONIAL
+  ----------------------------------------- */
+
+  .testimonial-content {
+    grid-template-columns: auto 1fr auto;
+
+    gap: 20px;
+  }
+
+  .client-image {
+    display: none;
+  }
+
+  .client-details {
+    display: none;
+  }
+
+
+  /* -----------------------------------------
+     LOOKING SECTION
+  ----------------------------------------- */
+
+  .looking-cards {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+  }
+
+
+  /* -----------------------------------------
+     CATEGORIES
+  ----------------------------------------- */
+
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+  }
+
+
+  /* -----------------------------------------
+     SERVICES
+  ----------------------------------------- */
+
+  .cosmic-services-cards {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+  }
+
+
+  /* -----------------------------------------
+     REALTOR
+  ----------------------------------------- */
+
+  .realtor-container {
+    gap: 30px;
+  }
+
+
+  /* -----------------------------------------
+     PARTNERS
+  ----------------------------------------- */
+
+  .partners-logos {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -----------------------------------------
+     HERO
+  ----------------------------------------- */
+
+  .hero-section {
+    min-height: auto;
+
+    padding: 120px 0 45px;
+  }
+
+  .hero-content {
+    width: 90%;
+  }
+
+  .hero-heading {
+    text-align: center;
+  }
+
+  .hero-heading h1 {
+    font-size: clamp(32px, 9vw, 48px);
+
+    line-height: 1.05;
+  }
+
+  .hero-heading p {
+    font-size: 14px;
+
+    max-width: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* -----------------------------------------
+     SEARCH PANEL
+  ----------------------------------------- */
+
+  .property-search-panel {
+    padding: 16px;
+
+    border-radius: 14px;
+  }
+
+  .property-tabs {
+    width: 100%;
+
+    gap: 5px;
+
+    padding-bottom: 8px;
+  }
+
+  .property-tab {
+    padding: 10px 12px;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+  }
+
+  .property-main-search {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .property-input {
+    width: 100%;
+  }
+
+  .property-search-button {
+    width: 100%;
+
+    min-height: 48px;
+  }
+
+
+  /* -----------------------------------------
+     LOCALITIES
+  ----------------------------------------- */
+
+  .popular-localities {
+    margin-top: 22px;
+  }
+
+  .popular-title {
+    width: 100%;
+  }
+
+  .locality-list {
+    width: 100%;
+
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 8px;
+
+    padding-bottom: 5px;
+  }
+
+  .locality-item {
+    white-space: nowrap;
+  }
+
+
+  /* -----------------------------------------
+     OWNER CTA
+  ----------------------------------------- */
+
+  .property-owner-cta {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 6px;
+
+    margin-top: 20px;
+  }
+
+
+  /* =====================================================
+     SHOWCASE
+  ===================================================== */
+
+  .showcase-properties {
+    width: 92%;
+
+    margin: 50px auto;
+  }
+
+  .showcase-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+  .showcase-title h2 {
+    font-size: 30px;
+  }
+
+
+  /* -----------------------------------------
+     THUMBNAILS
+  ----------------------------------------- */
+
+  .showcase-thumbnail-wrapper {
+    width: 100%;
+
+    max-width: 100%;
+
+    gap: 8px;
+  }
+
+  .showcase-thumbnails {
+    width: 100%;
+
+    flex: 1;
+
+    overflow: hidden;
+
+    gap: 8px;
+  }
+
+  .showcase-thumbnail {
+    width: calc(
+      (100% - 16px) / 3
+    );
+
+    height: 70px;
+  }
+
+  .showcase-thumb-arrow {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+  }
+
+
+  /* -----------------------------------------
+     MAIN SHOWCASE CARD
+  ----------------------------------------- */
+
+  .showcase-card {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .showcase-info {
+    order: 2;
+
+    padding: 28px 22px;
+  }
+
+  .showcase-image {
+    order: 1;
+
+    width: 100%;
+
+    min-height: 350px;
+  }
+
+  .showcase-image > img {
+    min-height: 350px;
+  }
+
+  .showcase-details h3 {
+    font-size: 26px;
+  }
+
+  .showcase-contact {
+    width: 100%;
+  }
+
+  .showcase-large-arrow {
+    width: 38px;
+    height: 38px;
+
+    font-size: 24px;
+  }
+
+  .showcase-large-prev {
+    left: 12px;
+  }
+
+  .showcase-large-next {
+    right: 12px;
+  }
+
+
+  /* -----------------------------------------
+     TESTIMONIAL
+  ----------------------------------------- */
+
+  .testimonial-content {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 15px;
+  }
+
+  .testimonial-quote {
+    display: none;
+  }
+
+  .testimonial-text {
+    width: 100%;
+  }
+
+  .testimonial-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .testimonial-slider {
+    width: 80%;
+  }
+
+
+  /* -----------------------------------------
+     LOOKING FOR
+  ----------------------------------------- */
+
+  .looking-heading {
+    padding: 0 5%;
+
+    text-align: center;
+  }
+
+  .looking-heading h2 {
+    font-size: 30px;
+  }
+
+  .looking-cards {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .looking-card {
+    width: 100%;
+  }
+
+
+  /* -----------------------------------------
+     CATEGORIES
+  ----------------------------------------- */
+
+  .category-top {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .category-top img {
+    width: 100%;
+
+    max-height: 280px;
+
+    object-fit: cover;
+  }
+
+  .categories-heading {
+    padding: 35px 20px;
+
+    text-align: center;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+
+  /* -----------------------------------------
+     SERVICES
+  ----------------------------------------- */
+
+  .cosmic-services-heading {
+    text-align: center;
+  }
+
+  .cosmic-services-cards {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .cosmic-service-card {
+    min-height: 260px;
+  }
+
+
+  /* -----------------------------------------
+     REALTOR
+  ----------------------------------------- */
+
+  .realtor-container {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .realtor-content {
+    order: 2;
+
+    text-align: center;
+  }
+
+  .realtor-image {
+    order: 1;
+  }
+
+  .realtor-image img {
+    width: 100%;
+  }
+
+
+  /* -----------------------------------------
+     PARTNERS
+  ----------------------------------------- */
+
+  .partners-logos {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   576px
+========================================================= */
+
+@media (max-width: 576px) {
+
+  /* -----------------------------------------
+     HERO
+  ----------------------------------------- */
+
+  .hero-section {
+    padding-top: 105px;
+  }
+
+  .hero-heading h1 {
+    font-size: 31px;
+  }
+
+  .hero-heading p {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .property-search-panel {
+    padding: 12px;
+  }
+
+  .property-tab {
+    font-size: 10px;
+
+    padding: 9px 10px;
+  }
+
+  .property-input input {
+    font-size: 13px;
+  }
+
+
+  /* -----------------------------------------
+     SHOWCASE
+  ----------------------------------------- */
+
+  .showcase-properties {
+    width: 94%;
+  }
+
+  .showcase-title {
+  width: 100%;
+  text-align: center;
+}
+
+.showcase-title h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+  .showcase-thumbnail {
+    height: 60px;
+  }
+
+  .showcase-thumbnail span {
+    font-size: 8px;
+
+    padding: 5px;
+  }
+
+  .showcase-thumb-arrow {
+    width: 32px;
+    height: 32px;
+
+    font-size: 21px;
+  }
+
+  .showcase-image,
+  .showcase-image > img {
+    min-height: 270px;
+  }
+
+  .showcase-info {
+    padding: 24px 18px;
+  }
+
+  .showcase-developer {
+    gap: 10px;
+  }
+
+  .developer-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .showcase-details h3 {
+    font-size: 23px;
+  }
+
+  .showcase-location {
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+  .showcase-price {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 4px;
+  }
+
+  .showcase-large-arrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 21px;
+  }
+
+  .showcase-pause {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  /* -----------------------------------------
+     CATEGORIES
+  ----------------------------------------- */
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* -----------------------------------------
+     PARTNERS
+  ----------------------------------------- */
+
+  .partners-logos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .partner-logo {
+    min-height: 80px;
+  }
+
+
+  /* -----------------------------------------
+     FLOATING BUTTONS
+  ----------------------------------------- */
+
+  .floating-buttons {
+    right: 15px;
+
+    bottom: 15px;
+
+    gap: 8px;
+  }
+
+  .floating-button {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .hero-content {
+    width: 94%;
+  }
+
+  .hero-heading h1 {
+    font-size: 28px;
+  }
+
+  .property-search-panel {
+    border-radius: 12px;
+  }
+
+  .property-tab {
+    font-size: 9px;
+
+    padding: 8px;
+  }
+
+  .showcase-properties {
+    width: 94%;
+  }
+
+  .showcase-thumbnail {
+    width: calc(
+      (100% - 8px) / 2
+    );
+  }
+
+  .showcase-thumbnails {
+    gap: 8px;
+  }
+
+  .showcase-thumbnail:nth-child(3) {
+    display: none;
+  }
+
+  .showcase-image,
+  .showcase-image > img {
+    min-height: 240px;
+  }
+
+  .showcase-info {
+    padding: 20px 15px;
+  }
+
+  .showcase-details h3 {
+    font-size: 21px;
+  }
+
+  .looking-heading h2 {
+    font-size: 25px;
   }
 
 }
