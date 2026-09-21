@@ -252,12 +252,12 @@ function Home() {
         <div className="showcase-title">
 
           <h2>
-            Housing's top picks
+            Our Portfolio
           </h2>
 
-          <p>
+          {/* <p>
             Explore top living options with us
-          </p>
+          </p> */}
 
         </div>
 
