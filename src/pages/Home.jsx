@@ -22,7 +22,52 @@ import myg from "../assets/images/myg.png";
 import dubai from "../assets/images/dubai.png";
 import partner6 from "../assets/images/partner-6.png";
 
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+
+  const navigate = useNavigate();
+
+  const properties = [
+    {
+      id: 1,
+      name: "CHITRAKUT HEIGHTS",
+      location: "Jaipur",
+      price: "₹75 Lakhs",
+      type: "2, 3 BHK Apartments",
+      image: property1,
+      developer: "Chitrakut Developers",
+    },
+
+    {
+      id: 2,
+      name: "BHAWANI NIVARA",
+      location: "Malad",
+      price: "₹52 Lakhs",
+      type: "2, 3 BHK Apartments",
+      image: property2,
+      developer: "Bhawani Group",
+    },
+
+    {
+      id: 3,
+      name: "OTC CAPITAL CITY",
+      location: "Ahmedabad",
+      price: "₹25 Crore",
+      type: "3, 4 BHK Apartments",
+      image: property3,
+      developer: "OTC Developers",
+    },
+  ];
+
+
+  const [activeProperty, setActiveProperty] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+
+  const currentProperty = properties[activeProperty];
+
   return (
     <>
       <Navbar />
@@ -196,68 +241,187 @@ function Home() {
 
         {/* Recent Properties Section */}
 
-        <section className="recent-properties">
-          <div className="section-heading">
-            <p>Recent</p>
-            <h2>Properties</h2>
-            <span>check out some of our latest properties</span>
+        <section className="showcase-properties">
+
+      {/* =================================
+          SECTION HEADER
+      ================================= */}
+
+      <div className="showcase-header">
+
+        <div className="showcase-title">
+
+          <h2>
+            Housing's top picks
+          </h2>
+
+          <p>
+            Explore top living options with us
+          </p>
+
+        </div>
+
+
+        {/* =================================
+            PROPERTY THUMBNAILS
+        ================================= */}
+
+        <div className="showcase-thumbnails">
+
+          {properties.map((property, index) => (
+
+            <button
+              key={property.id}
+              type="button"
+              className={`showcase-thumbnail ${
+                activeProperty === index ? "active" : ""
+              }`}
+              onClick={() => {
+                setActiveProperty(index);
+                setIsPaused(false);
+              }}
+            >
+
+              <img
+                src={property.image}
+                alt={property.name}
+              />
+
+              <span>
+                {property.name}
+              </span>
+
+            </button>
+
+          ))}
+
+        </div>
+
+      </div>
+
+
+      {/* =================================
+          MAIN SHOWCASE
+      ================================= */}
+
+      <div className="showcase-card">
+
+
+        {/* =================================
+            LEFT PROPERTY INFORMATION
+        ================================= */}
+
+        <div className="showcase-info">
+
+
+          {/* Developer */}
+
+          <div className="showcase-developer">
+
+            <div className="developer-logo">
+              ✦
+            </div>
+
+            <div>
+
+              <strong>
+                {currentProperty.developer}
+              </strong>
+
+              <button
+                type="button"
+                onClick={() => navigate("/properties")}
+              >
+                View Projects
+              </button>
+
+            </div>
+
           </div>
 
-          <button className="view-all-btn">View All</button>
 
-          <div className="property-cards">
-            {/* Card 1 */}
-            <div className="property-card">
-              <img src={property1} alt="Property" />
+          {/* Property Details */}
 
-              <div className="property-info">
-                <h3>CHITRAKUT HEIGHTS</h3>
+          <div className="showcase-details">
 
-                <p>📍 Jaipur</p>
+            <h3>
+              {currentProperty.name}
+            </h3>
 
-                <div className="property-bottom">
-                  <strong>₹75 Lakhs</strong>
+            <p className="showcase-location">
+              📍 {currentProperty.location}
+            </p>
 
-                  <button>View Details</button>
-                </div>
-              </div>
+
+            <div className="showcase-price">
+
+              <strong>
+                {currentProperty.price}
+              </strong>
+
+              <span>
+                {currentProperty.type}
+              </span>
+
             </div>
 
-            {/* Card 2 */}
-            <div className="property-card">
-              <img src={property2} alt="Property" />
-
-              <div className="property-info">
-                <h3>BHAWANI NIVARA</h3>
-
-                <p>📍 Malad</p>
-
-                <div className="property-bottom">
-                  <strong>₹52 Lakhs</strong>
-
-                  <button>View Details</button>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="property-card">
-              <img src={property3} alt="Property" />
-
-              <div className="property-info">
-                <h3>OTC CAPITAL CITY</h3>
-
-                <p>📍 Ahmedabad</p>
-
-                <div className="property-bottom">
-                  <strong>₹25 Crore</strong>
-
-                  <button>View Details</button>
-                </div>
-              </div>
-            </div>
           </div>
-        </section>
+
+
+          {/* Contact */}
+
+          <button
+            type="button"
+            className="showcase-contact"
+            onClick={() => navigate("/contact")}
+          >
+            Contact
+          </button>
+
+        </div>
+
+
+        {/* =================================
+            LARGE PROPERTY IMAGE
+        ================================= */}
+
+        <div className="showcase-image">
+
+          <img
+            src={currentProperty.image}
+            alt={currentProperty.name}
+          />
+
+
+          {/* Pause */}
+
+          <button
+            type="button"
+            className="showcase-pause"
+            onClick={() => setIsPaused(!isPaused)}
+            aria-label={
+              isPaused
+                ? "Play property showcase"
+                : "Pause property showcase"
+            }
+          >
+            {isPaused ? "▶" : "Ⅱ"}
+          </button>
+
+
+          {/* Image overlay */}
+
+          <div className="showcase-image-overlay">
+            <span>
+              {activeProperty + 1} / {properties.length}
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
         {/* Client Testimonial Section */}
 
