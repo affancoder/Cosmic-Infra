@@ -3490,6 +3490,408 @@
   }
 
 }
+
+/* =====================================================
+   COSMIC INFRA — CLIENT REVIEWS
+===================================================== */
+
+.cosmic-client-reviews-section {
+  width: 100%;
+  padding: 70px 6%;
+  background: #f8f7f3;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.cosmic-client-reviews-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+
+.cosmic-client-reviews-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cosmic-client-reviews-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #cda653;
+  margin-bottom: 6px;
+}
+
+
+.cosmic-client-reviews-heading h2 {
+  margin: 0;
+  color: #292929;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.cosmic-client-reviews-navigation {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+
+.cosmic-client-reviews-nav-button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #555;
+  font-size: 27px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.cosmic-client-reviews-nav-button:hover {
+  color: #cda653;
+  transform: scale(1.08);
+}
+
+
+/* =====================================================
+   VIEW ALL REVIEWS
+===================================================== */
+
+.cosmic-client-reviews-view-all {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #333;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.cosmic-client-reviews-view-all span {
+  color: #cda653;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+
+.cosmic-client-reviews-view-all:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   REVIEW GRID
+===================================================== */
+
+.cosmic-client-reviews-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+
+/* =====================================================
+   REVIEW CARD
+===================================================== */
+
+.cosmic-client-review-card {
+  min-height: 190px;
+  padding: 24px 26px 20px;
+  background: #ffffff;
+  border: 1px solid #eeeae1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.cosmic-client-review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.cosmic-client-review-quote {
+  color: #cda653;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 22px;
+  height: 25px;
+}
+
+
+/* =====================================================
+   REVIEW TEXT
+===================================================== */
+
+.cosmic-client-review-text {
+  margin: 7px 0 18px;
+  max-width: 330px;
+  color: #4d4d4d;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   REVIEW BOTTOM
+===================================================== */
+
+.cosmic-client-review-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+
+.cosmic-client-review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.cosmic-client-review-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+
+.cosmic-client-review-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =====================================================
+   USER DETAILS
+===================================================== */
+
+.cosmic-client-review-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+
+.cosmic-client-review-user-info h4 {
+  margin: 0;
+  color: #292929;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.cosmic-client-review-user-info span {
+  color: #777;
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   RATING
+===================================================== */
+
+.cosmic-client-review-rating {
+  display: flex;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+
+.cosmic-client-review-rating span {
+  color: #cda653;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   SLIDER
+===================================================== */
+
+.cosmic-client-reviews-slider {
+  width: 100%;
+  height: 2px;
+  background: #e5e1d8;
+  margin-top: 35px;
+  position: relative;
+}
+
+
+.cosmic-client-reviews-slider-active {
+  display: block;
+  width: 33.33%;
+  height: 2px;
+  background: #cda653;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .cosmic-client-reviews-section {
+    padding: 55px 5%;
+  }
+
+
+  .cosmic-client-reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+  .cosmic-client-review-card:last-child {
+    display: none;
+  }
+
+
+  .cosmic-client-reviews-heading h2 {
+    font-size: 30px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .cosmic-client-reviews-section {
+    padding: 45px 20px;
+  }
+
+
+  .cosmic-client-reviews-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+
+  .cosmic-client-reviews-heading {
+    width: 100%;
+  }
+
+
+  .cosmic-client-reviews-heading h2 {
+    font-size: 27px;
+  }
+
+
+  .cosmic-client-reviews-navigation {
+    margin: 0;
+  }
+
+
+  .cosmic-client-reviews-view-all {
+    margin-left: auto;
+    align-self: center;
+  }
+
+
+  .cosmic-client-reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  .cosmic-client-review-card {
+    min-height: 185px;
+  }
+
+
+  .cosmic-client-review-card:last-child {
+    display: flex;
+  }
+
+
+  .cosmic-client-review-text {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .cosmic-client-reviews-section {
+    padding: 40px 15px;
+  }
+
+
+  .cosmic-client-reviews-heading h2 {
+    font-size: 24px;
+  }
+
+
+  .cosmic-client-review-card {
+    padding: 20px;
+  }
+
+
+  .cosmic-client-review-bottom {
+    align-items: flex-end;
+  }
+
+
+  .cosmic-client-review-rating span {
+    font-size: 11px;
+  }
+
+}
+
 /* =========================
    TESTIMONIAL SECTION
 ========================= */

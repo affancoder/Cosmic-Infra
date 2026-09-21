@@ -791,9 +791,9 @@ function Home() {
           </aside>
         </section>
 
-        {/* =====================================================
+        {/* ===============
     PROJECT STORY / PROJECT GALLERY
-===================================================== */}
+============= */}
 
         <section className="cosmic-project-gallery">
           {/* =================================================
@@ -1066,8 +1066,249 @@ function Home() {
         </section>
 
         {/* =====================================================
+    CLIENT REVIEWS SECTION
+===================================================== */}
+
+<section className="cosmic-client-reviews-section">
+
+  {/* ================================
+      SECTION HEADER
+  ================================= */}
+
+  <div className="cosmic-client-reviews-header">
+
+    <div className="cosmic-client-reviews-heading">
+
+      <span className="cosmic-client-reviews-label">
+        CLIENT REVIEWS
+      </span>
+
+      <h2>
+        What Our Customers Say
+      </h2>
+
+    </div>
+
+
+    {/* HEADER ARROWS */}
+
+    <div className="cosmic-client-reviews-navigation">
+
+      <button
+        type="button"
+        className="cosmic-client-reviews-nav-button"
+        aria-label="Previous reviews"
+      >
+        ‹
+      </button>
+
+      <button
+        type="button"
+        className="cosmic-client-reviews-nav-button"
+        aria-label="Next reviews"
+      >
+        ›
+      </button>
+
+    </div>
+
+
+    {/* VIEW ALL */}
+
+    <button
+      type="button"
+      className="cosmic-client-reviews-view-all"
+      onClick={() => navigate("/contact")}
+    >
+      VIEW ALL REVIEWS
+      <span>→</span>
+    </button>
+
+  </div>
+
+
+  {/* ================================
+      REVIEW CARDS
+  ================================= */}
+
+  <div className="cosmic-client-reviews-grid">
+
+
+    {/* REVIEW 1 */}
+
+    <article className="cosmic-client-review-card">
+
+      <div className="cosmic-client-review-quote">
+        “
+      </div>
+
+      <p className="cosmic-client-review-text">
+        Excellent quality and timely delivery.
+        Cosmic Infra truly understands modern
+        living.
+      </p>
+
+      <div className="cosmic-client-review-bottom">
+
+        <div className="cosmic-client-review-user">
+
+          <div className="cosmic-client-review-avatar">
+            <img
+              src={client}
+              alt="Rahul Mehta"
+            />
+          </div>
+
+          <div className="cosmic-client-review-user-info">
+
+            <h4>
+              Rahul Mehta
+            </h4>
+
+            <span>
+              Homeowner
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div className="cosmic-client-review-rating">
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    {/* REVIEW 2 */}
+
+    <article className="cosmic-client-review-card">
+
+      <div className="cosmic-client-review-quote">
+        “
+      </div>
+
+      <p className="cosmic-client-review-text">
+        A seamless experience from booking
+        to possession. Highly recommended!
+      </p>
+
+      <div className="cosmic-client-review-bottom">
+
+        <div className="cosmic-client-review-user">
+
+          <div className="cosmic-client-review-avatar">
+            <img
+              src={client}
+              alt="Priya Sharma"
+            />
+          </div>
+
+          <div className="cosmic-client-review-user-info">
+
+            <h4>
+              Priya Sharma
+            </h4>
+
+            <span>
+              Homeowner
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div className="cosmic-client-review-rating">
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    {/* REVIEW 3 */}
+
+    <article className="cosmic-client-review-card">
+
+      <div className="cosmic-client-review-quote">
+        “
+      </div>
+
+      <p className="cosmic-client-review-text">
+        Professional team and outstanding
+        designs. Proud to be a part of the
+        Cosmic family.
+      </p>
+
+      <div className="cosmic-client-review-bottom">
+
+        <div className="cosmic-client-review-user">
+
+          <div className="cosmic-client-review-avatar">
+            <img
+              src={client}
+              alt="Amit Verma"
+            />
+          </div>
+
+          <div className="cosmic-client-review-user-info">
+
+            <h4>
+              Amit Verma
+            </h4>
+
+            <span>
+              Investor
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div className="cosmic-client-review-rating">
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  {/* ================================
+      SLIDER INDICATOR
+  ================================= */}
+
+  <div className="cosmic-client-reviews-slider">
+
+    <span className="cosmic-client-reviews-slider-active"></span>
+
+  </div>
+
+</section>
+
+        {/* =============================
             CLIENT TESTIMONIAL
-        ===================================================== */}
+        =============================== */}
 
         <section className="testimonial-section">
           <div className="testimonial-heading">
