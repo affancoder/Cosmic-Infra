@@ -1,206 +1,708 @@
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: #ffffff;
+}
+
+
+/* =====================================
+   EXISTING BACKGROUND OVERLAY
+===================================== */
+
 .hero-overlay {
   position: absolute;
+
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.18),
+      rgba(0, 0, 0, 0.48)
+    );
 }
+
+
+/* =====================================
+   HERO CONTENT
+===================================== */
 
 .hero-content {
   position: relative;
+
   z-index: 2;
 
-  min-height: 430px;
-
-  max-width: 1200px;
-  margin: auto;
-
-  padding: 50px 30px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  gap: 40px;
-}
-
-.hero-left {
-  flex: 1;
-}
-
-.hero-left h1 {
-  color: white;
-
-  font-size: 38px;
-  line-height: 0.95;
-
-  font-weight: 400;
-
-  margin-bottom: 35px;
-}
-
-.hero-left h1 strong {
-  font-weight: 800;
-}
-
-.hero-left h1 span {
-  font-size: 52px;
-  font-weight: 900;
-}
-
-.property-search {
   width: 100%;
-  max-width: 650px;
+  max-width: 1120px;
 
-  background: white;
+  margin: 0 auto;
+
+  padding:
+    150px
+    40px
+    60px;
 
   display: flex;
-  align-items: stretch;
 
-  min-height: 55px;
+  flex-direction: column;
+
+  align-items: center;
 }
 
-.search-field {
-  flex: 1;
 
-  padding: 8px 12px;
+/* =====================================
+   HERO HEADING
+===================================== */
 
-  border-right: 1px solid #ddd;
+.hero-heading {
+  width: 100%;
+
+  margin-bottom: 34px;
+
+  text-align: center;
 }
 
-.search-field label {
-  display: block;
-
-  font-size: 9px;
-  color: #777;
-
-  margin-bottom: 4px;
-}
-
-.search-field p {
-  font-size: 10px;
-  color: #333;
-
+.hero-heading h1 {
   margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 4vw, 52px);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
-.search-btn {
-  width: 55px;
+.hero-heading p {
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================
+   PROPERTY SEARCH PANEL
+===================================== */
+
+.property-search-panel {
+  width: min(100%, 900px);
+
+  overflow: hidden;
 
   background: #cda858;
-  color: white;
 
-  border: none;
+  border-radius: 14px 14px 0 0;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.22);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* =====================================
+   PROPERTY TABS
+===================================== */
+
+.property-tabs {
+  min-height: 48px;
+
+  padding: 0 26px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 42px;
+}
+
+.property-tab {
+  position: relative;
+
+  height: 48px;
+
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  background: transparent;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+.property-tab:hover {
+  color: #ffffff;
+}
+
+.property-tab.active {
+  color: #ffffff;
+}
+
+.property-tab.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 8px;
+
+  width: 24px;
+  height: 2px;
+
+  background: #ffffff;
+
+  border-radius: 5px;
+}
+
+
+/* =====================================
+   MAIN SEARCH
+===================================== */
+
+.property-main-search {
+  width: calc(100% - 0px);
+
+  min-height: 66px;
+
+  padding: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  background: #ffffff;
+
+  border-radius: 0 0 10px 10px;
+}
+
+
+/* =====================================
+   SEARCH INPUT
+===================================== */
+
+.property-input {
+  flex: 1;
+
+  height: 50px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.property-search-icon {
+  flex-shrink: 0;
+
+  color: #777777;
 
   font-size: 18px;
 }
 
-.hero-form {
-  width: 290px;
-
-  background: white;
-
-  padding: 18px;
-
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-}
-
-.hero-form h3 {
-  margin: 0 0 3px;
-
-  font-size: 14px;
-  color: #222;
-}
-
-.form-subtitle {
-  font-size: 9px;
-  color: #777;
-
-  margin: 0 0 12px;
-}
-
-.hero-form input,
-.hero-form select,
-.hero-form textarea {
+.property-input input {
   width: 100%;
 
+  height: 100%;
+
+  padding: 0;
+
   border: none;
-  border-bottom: 1px solid #ddd;
-
-  padding: 8px 4px;
-
-  margin-bottom: 8px;
-
-  font-size: 10px;
 
   outline: none;
 
-  font-family: inherit;
+  color: #292929;
+
+  background: transparent;
+
+  font-size: 14px;
 }
 
-.hero-form textarea {
-  resize: none;
+.property-input input::placeholder {
+  color: #777777;
 }
 
-.form-btn {
-  width: 100%;
+
+/* =====================================
+   SEARCH BUTTON
+===================================== */
+
+.property-search-button {
+  width: 110px;
+
+  height: 48px;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
 
   background: #cda858;
-  color: white;
 
-  border: none;
+  border-radius: 9px;
 
-  padding: 9px;
+  font-size: 13px;
 
-  font-size: 10px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
-@media (max-width: 768px) {
+.property-search-button:hover {
+  background: #b8954b;
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================
+   POPULAR LOCALITIES
+===================================== */
+
+.popular-localities {
+  width: min(100%, 900px);
+
+  margin-top: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+/* =====================================
+   POPULAR TITLE
+===================================== */
+
+.popular-title {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+.popular-icon {
+  font-size: 16px;
+}
+
+
+/* =====================================
+   LOCALITY LIST
+===================================== */
+
+.locality-list {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  overflow: hidden;
+}
+
+
+/* =====================================
+   LOCALITY BUTTON
+===================================== */
+
+.locality-item {
+  height: 38px;
+
+  padding: 0 13px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border-radius: 5px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.locality-item:hover {
+  background: rgba(255, 255, 255, 0.24);
+
+  transform: translateY(-1px);
+}
+
+.locality-item span {
+  font-size: 18px;
+
+  line-height: 1;
+
+  opacity: 0.8;
+}
+
+
+/* =====================================
+   NEXT BUTTON
+===================================== */
+
+.locality-next {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  background: #b8954b;
+
+  border-radius: 50%;
+
+  font-size: 22px;
+
+  line-height: 1;
+}
+
+
+/* =====================================
+   PROPERTY OWNER CTA
+===================================== */
+
+.property-owner-cta {
+  margin-top: 40px;
+
+  padding: 10px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #fff;
+
+  background: #cda858;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.16);
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.property-owner-cta strong {
+  color: #ffffff;
+
+  text-decoration: underline;
+
+  text-underline-offset: 2px;
+
+  font-weight: 700;
+}
+
+.owner-sparkle {
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.owner-arrow {
+  margin-left: 2px;
+
+  font-size: 18px;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
 
   .hero-section {
-    min-height: auto;
+    min-height: 580px;
   }
 
   .hero-content {
-    flex-direction: column;
-
-    align-items: stretch;
-
-    padding: 40px 20px;
+    padding:
+      135px
+      25px
+      50px;
   }
 
-  .hero-left h1 {
-    font-size: 32px;
-  }
-
-  .hero-left h1 span {
-    font-size: 45px;
-  }
-
-  .property-search {
-    flex-direction: column;
-  }
-
-  .search-field {
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .search-btn {
+  .property-search-panel,
+  .popular-localities {
     width: 100%;
-    height: 45px;
   }
 
-  .hero-form {
-    width: 100%;
-    max-width: 350px;
-
-    margin: 0 auto;
+  .property-tabs {
+    gap: 28px;
   }
+
+  .locality-list {
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .locality-list::-webkit-scrollbar {
+    display: none;
+  }
+
 }
 
-/* =========================
-   RECENT PROPERTIES
-========================= */
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+  .hero-section {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    padding:
+      115px
+      18px
+      40px;
+  }
+
+
+  /* Heading */
+
+  .hero-heading {
+    margin-bottom: 25px;
+  }
+
+  .hero-heading h1 {
+    font-size: 34px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.8px;
+  }
+
+  .hero-heading p {
+    max-width: 340px;
+
+    margin:
+      10px auto 0;
+
+    font-size: 13px;
+  }
+
+
+  /* Search panel */
+
+  .property-search-panel {
+    border-radius: 12px;
+  }
+
+
+  /* Tabs */
+
+  .property-tabs {
+    height: 45px;
+
+    padding: 0 16px;
+
+    gap: 24px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .property-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .property-tab {
+    flex-shrink: 0;
+
+    font-size: 10px;
+  }
+
+
+  /* Search */
+
+  .property-main-search {
+    min-height: 58px;
+
+    padding: 7px;
+  }
+
+  .property-input {
+    height: 44px;
+
+    padding: 0 10px;
+  }
+
+  .property-input input {
+    font-size: 12px;
+  }
+
+  .property-search-button {
+    width: 78px;
+
+    height: 44px;
+
+    font-size: 11px;
+  }
+
+
+  /* Localities */
+
+  .popular-localities {
+    margin-top: 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .locality-list {
+    width: 100%;
+  }
+
+
+  /* Owner CTA */
+
+  .property-owner-cta {
+    margin-top: 25px;
+
+    max-width: 100%;
+
+    padding: 9px 13px;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 420px) {
+
+  .hero-content {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-heading h1 {
+    font-size: 29px;
+  }
+
+  .hero-heading p {
+    font-size: 12px;
+  }
+
+  .property-tabs {
+    gap: 20px;
+  }
+
+  .property-main-search {
+    display: flex;
+  }
+
+  .property-input {
+    min-width: 0;
+  }
+
+  .property-input input {
+    min-width: 0;
+  }
+
+  .property-search-button {
+    width: 70px;
+  }
+
+  .property-owner-cta {
+    font-size: 9px;
+  }
+
+}
+/* ========================= RECENT PROPERTIES ========================= */
 
 .recent-properties {
   position: relative;

@@ -29,62 +29,169 @@ function Home() {
 
       <main className="main-content">
         <section className="hero-section">
-          <div className="hero-overlay"></div>
 
-          <div className="hero-content">
-            {/* Left Content */}
-            <div className="hero-left">
-              <h1>
-                FIND YOUR
-                <br />
-                <strong>DREAM</strong>
-                <br />
-                <span>TODAY</span>
-              </h1>
+  {/* KEEP YOUR EXISTING BACKGROUND */}
+  <div className="hero-overlay"></div>
 
-              {/* Search Box */}
-              <div className="property-search">
-                <div className="search-field">
-                  <label>Location</label>
-                  <p>Search Location</p>
-                </div>
+  <div className="hero-content">
 
-                <div className="search-field">
-                  <label>Property Status</label>
-                  <p>For Sale</p>
-                </div>
+    {/* =================================
+        HERO HEADING
+    ================================= */}
 
-                <div className="search-field">
-                  <label>Property Type</label>
-                  <p>All Types</p>
-                </div>
+    <div className="hero-heading">
 
-                <button className="search-btn">🔍</button>
-              </div>
-            </div>
+      <h1>
+        Properties to buy in Bengaluru
+      </h1>
 
-            {/* Right Form */}
-            <div className="hero-form">
-              <h3>Let's Go Call You!</h3>
+      <p>
+        5K+ listings added daily and 77K+ total verified
+      </p>
 
-              <p className="form-subtitle">Talk to our property experts</p>
+    </div>
 
-              <input type="text" placeholder="Your Name" />
 
-              <input type="tel" placeholder="Your Mobile" />
+    {/* =================================
+        PROPERTY SEARCH PANEL
+    ================================= */}
 
-              <select>
-                <option>Select City</option>
-                <option>Bengaluru</option>
-                <option>Delhi</option>
-                <option>Mumbai</option>
-              </select>
+    <div className="property-search-panel">
 
-              <textarea placeholder="Write your message" rows="2"></textarea>
+      {/* SEARCH TABS */}
 
-              <button className="form-btn">Submit</button>
-            </div>
-          </div>
+      <div className="property-tabs">
+
+        <button className="property-tab active">
+          BUY
+        </button>
+
+        <button className="property-tab">
+          RENT
+        </button>
+
+        <button className="property-tab">
+          COMMERCIAL
+        </button>
+
+        <button className="property-tab">
+          PG/CO-LIVING
+        </button>
+
+        <button className="property-tab">
+          PLOTS
+        </button>
+
+      </div>
+
+
+      {/* MAIN SEARCH */}
+
+      <div className="property-main-search">
+
+        <div className="property-input">
+
+          <span className="property-search-icon">
+            🔍
+          </span>
+
+          <input
+            type="text"
+            placeholder="Search for locality, landmark, project, or builder"
+          />
+
+        </div>
+
+        <button className="property-search-button">
+          Search
+        </button>
+
+      </div>
+
+    </div>
+
+
+    {/* =================================
+        POPULAR LOCALITIES
+    ================================= */}
+
+    <div className="popular-localities">
+
+      <div className="popular-title">
+
+        <span className="popular-icon">
+          📍
+        </span>
+
+        <strong>
+          Popular Localities
+        </strong>
+
+      </div>
+
+
+      <div className="locality-list">
+
+        <button className="locality-item">
+          Nasik
+          <span>›</span>
+        </button>
+
+        <button className="locality-item">
+          Latino
+          <span>›</span>
+        </button>
+
+        <button className="locality-item">
+          Daniel City
+          <span>›</span>
+        </button>
+
+        <button className="locality-item">
+          Malaad 
+          <span>›</span>
+        </button>
+
+        <button className="locality-item">
+          Pune
+          <span>›</span>
+        </button>
+
+        <button className="locality-next">
+          ›
+        </button>
+
+      </div>
+
+    </div>
+
+
+    {/* =================================
+        PROPERTY OWNER CTA
+    ================================= */}
+
+    <div className="property-owner-cta">
+
+      <span className="owner-sparkle">
+        ✦
+      </span>
+
+      <span>
+        Are you a Property Owner?
+      </span>
+
+      <strong>
+        Sell / Rent for FREE
+      </strong>
+
+      <span className="owner-arrow">
+        ›
+      </span>
+
+    </div>
+
+  </div>
+
         </section>
 
         {/* Recent Properties Section */}
