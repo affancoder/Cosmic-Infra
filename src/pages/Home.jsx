@@ -1306,6 +1306,177 @@ function Home() {
 
 </section>
 
+      {/* =====================================================
+    LATEST NEWS / UPDATES SECTION
+===================================================== */}
+
+<section className="cosmic-latest-updates">
+
+  {/* SECTION HEADING */}
+  <div className="cosmic-latest-heading">
+
+    <span>STAY UPDATED</span>
+
+    <h2>
+      Latest From Cosmic Infra
+    </h2>
+
+  </div>
+
+
+  {/* THREE UPDATE CARDS */}
+  <div className="cosmic-latest-grid">
+
+
+    {/* ==============================
+        CARD 1
+    ============================== */}
+
+    <article className="cosmic-latest-card">
+
+      {/* LEFT IMAGE */}
+      <div className="cosmic-latest-image">
+
+        <img
+          src={onkar1}
+          alt="Sudarshan Project"
+        />
+
+      </div>
+
+
+      {/* RIGHT CONTENT */}
+      <div className="cosmic-latest-content">
+
+        <span className="cosmic-latest-date">
+          21 SEP 2026
+        </span>
+
+        <h3>
+          SUDARSHAN
+        </h3>
+
+        <p>
+          Discover modern residential spaces designed
+          with comfort, quality and contemporary living
+          in mind.
+        </p>
+
+        <button
+          type="button"
+          className="cosmic-latest-read"
+          onClick={() => navigate("/properties")}
+        >
+          READ MORE
+          <span>→</span>
+        </button>
+
+      </div>
+
+    </article>
+
+
+
+    {/* ==============================
+        CARD 2
+    ============================== */}
+
+    <article className="cosmic-latest-card">
+
+      {/* LEFT IMAGE */}
+      <div className="cosmic-latest-image">
+
+        <img
+          src={property2}
+          alt="Shrimat Project"
+        />
+
+      </div>
+
+
+      {/* RIGHT CONTENT */}
+      <div className="cosmic-latest-content">
+
+        <span className="cosmic-latest-date">
+          18 SEP 2026
+        </span>
+
+        <h3>
+          SHRIMAT
+        </h3>
+
+        <p>
+          Explore spacious residences in prime locations
+          offering premium surroundings and thoughtful
+          design.
+        </p>
+
+        <button
+          type="button"
+          className="cosmic-latest-read"
+          onClick={() => navigate("/properties")}
+        >
+          READ MORE
+          <span>→</span>
+        </button>
+
+      </div>
+
+    </article>
+
+
+
+    {/* ==============================
+        CARD 3
+    ============================== */}
+
+    <article className="cosmic-latest-card">
+
+      {/* LEFT IMAGE */}
+      <div className="cosmic-latest-image">
+
+        <img
+          src={onkar2}
+          alt="Tathastu Project"
+        />
+
+      </div>
+
+
+      {/* RIGHT CONTENT */}
+      <div className="cosmic-latest-content">
+
+        <span className="cosmic-latest-date">
+          15 SEP 2026
+        </span>
+
+        <h3>
+          TATHASTU
+        </h3>
+
+        <p>
+          A thoughtfully planned project combining
+          elegant architecture, excellent location and
+          comfortable living.
+        </p>
+
+        <button
+          type="button"
+          className="cosmic-latest-read"
+          onClick={() => navigate("/properties")}
+        >
+          READ MORE
+          <span>→</span>
+        </button>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
         {/* =============================
             CLIENT TESTIMONIAL
         =============================== */}

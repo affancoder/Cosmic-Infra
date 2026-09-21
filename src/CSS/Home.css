@@ -3892,6 +3892,417 @@
 
 }
 
+/* =====================================================
+   COSMIC INFRA - LATEST UPDATES
+===================================================== */
+
+.cosmic-latest-updates {
+  width: 100%;
+  padding: 90px 6%;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.cosmic-latest-heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.cosmic-latest-heading span {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #c9a24d;
+  text-transform: uppercase;
+}
+
+.cosmic-latest-heading h2 {
+  margin: 0;
+
+  color: #292929;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  font-weight: 500;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* =====================================================
+   CARDS GRID
+===================================================== */
+
+.cosmic-latest-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.cosmic-latest-card {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    42% 58%;
+
+  background: #f8f7f3;
+
+  border: 1px solid #eee9dd;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cosmic-latest-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.cosmic-latest-image {
+  width: 100%;
+  height: 100%;
+
+  min-height: 245px;
+
+  overflow: hidden;
+}
+
+.cosmic-latest-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.cosmic-latest-card:hover
+.cosmic-latest-image img {
+  transform: scale(1.06);
+}
+
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.cosmic-latest-content {
+  min-width: 0;
+
+  padding: 25px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.cosmic-latest-date {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #c9a24d;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.cosmic-latest-content h3 {
+  margin: 0 0 12px;
+
+  color: #292929;
+
+  font-size: 21px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.cosmic-latest-content p {
+  margin: 0 0 18px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   READ MORE
+===================================================== */
+
+.cosmic-latest-read {
+  width: fit-content;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #292929;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.cosmic-latest-read span {
+  font-size: 17px;
+
+  line-height: 1;
+
+  color: #c9a24d;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.cosmic-latest-read:hover {
+  color: #c9a24d;
+
+  gap: 13px;
+}
+
+.cosmic-latest-read:hover span {
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .cosmic-latest-updates {
+    padding: 75px 5%;
+  }
+
+  .cosmic-latest-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .cosmic-latest-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width: 600px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .cosmic-latest-updates {
+    padding: 65px 5%;
+  }
+
+  .cosmic-latest-heading {
+    margin-bottom: 35px;
+  }
+
+  .cosmic-latest-heading h2 {
+    font-size: 32px;
+  }
+
+  .cosmic-latest-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .cosmic-latest-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  .cosmic-latest-image {
+    min-height: 220px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 520px) {
+
+  .cosmic-latest-updates {
+    padding: 55px 18px;
+  }
+
+  .cosmic-latest-heading {
+    margin-bottom: 28px;
+  }
+
+  .cosmic-latest-heading span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .cosmic-latest-heading h2 {
+    font-size: 27px;
+  }
+
+  .cosmic-latest-card {
+    grid-template-columns: 40% 60%;
+  }
+
+  .cosmic-latest-image {
+    min-height: 210px;
+  }
+
+  .cosmic-latest-content {
+    padding: 18px 15px;
+  }
+
+  .cosmic-latest-date {
+    font-size: 9px;
+
+    margin-bottom: 9px;
+  }
+
+  .cosmic-latest-content h3 {
+    font-size: 17px;
+
+    margin-bottom: 9px;
+  }
+
+  .cosmic-latest-content p {
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin-bottom: 13px;
+  }
+
+  .cosmic-latest-read {
+    font-size: 9px;
+
+    gap: 6px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .cosmic-latest-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmic-latest-image {
+    height: 190px;
+
+    min-height: 190px;
+  }
+
+  .cosmic-latest-content {
+    padding: 20px;
+  }
+
+}
+
 /* =========================
    TESTIMONIAL SECTION
 ========================= */
