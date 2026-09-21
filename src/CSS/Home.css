@@ -1489,6 +1489,18 @@
   background: #cda858;
 }
 
+.available {
+  margin-top: 40px;
+  font-size: 17px;
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  width: 120px;
+}
+
 /* =========================================================
    RESPONSIVE DESIGN
    IMPORTANT:
@@ -2365,6 +2377,1119 @@
 
 }
 
+/* =========================================
+   COSMIC MID BANNER
+========================================= */
+
+.cosmic-mid-banner {
+  width: 100%;
+  margin: 0;
+  padding: 0 50px;
+
+  overflow: hidden;
+
+  line-height: 0;
+}
+
+.cosmic-mid-banner img {
+  width: 100%;
+  height: 270px;
+
+  display: block;
+
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .cosmic-mid-banner{
+    margin: auto;
+    padding: 0px 24px;
+    margin-top: -30px;
+  }
+
+  .cosmic-mid-banner img {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .cosmic-mid-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* =========================================================
+   COSMIC INFRA ABOUT BLOCK — UNIQUE NAMESPACE
+   Prefix: ciab2026
+========================================================= */
+
+
+.ciab2026-main-shell {
+  width: 100%;
+  min-height: 420px;
+
+  display: grid;
+
+  grid-template-columns:
+    40%
+    42%
+    18%;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  margin-top: 50px;
+  padding: 0 50px;
+}
+
+
+/* =========================================================
+   PRIMARY VISUAL
+========================================================= */
+
+.ciab2026-primary-visual {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+
+  overflow: hidden;
+}
+
+.ciab2026-primary-visual-img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   CENTRAL CONTENT
+========================================================= */
+
+.ciab2026-central-content {
+  min-width: 0;
+
+  padding:
+    42px
+    30px
+    38px
+    34px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.ciab2026-section-kicker {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #c6aa6a;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.ciab2026-main-heading {
+  margin: 0 0 16px;
+
+  color: #1d1d1d;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 40px;
+  font-weight: 500;
+
+  line-height: 0.98;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ciab2026-main-description {
+  max-width: 560px;
+
+  margin: 0 0 22px;
+
+  color: #555555;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   STATISTICS ROW
+========================================================= */
+
+.ciab2026-statistics-row {
+  display: flex;
+  align-items: stretch;
+
+  margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL STAT
+========================================================= */
+
+.ciab2026-stat-unit {
+  min-width: 105px;
+
+  padding:
+    0 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right:
+    1px solid
+    #cfc8b7;
+}
+
+.ciab2026-stat-unit:first-child {
+  padding-left: 0;
+}
+
+.ciab2026-stat-unit:last-child {
+  border-right: none;
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.ciab2026-stat-value {
+  color: #222222;
+
+  font-size: 35px;
+  font-weight: 500;
+
+  line-height: 1.1;
+}
+
+
+/* =========================================================
+   STAT LABEL
+========================================================= */
+
+.ciab2026-stat-caption {
+  margin-top: 4px;
+
+  color: #555555;
+
+  font-size: 20px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   KNOW MORE ACTION
+========================================================= */
+
+.ciab2026-action-trigger {
+  width: 125px;
+  height: 38px;
+
+  padding:
+    0 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #292929;
+
+  background: #cda653;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ciab2026-action-trigger:hover {
+  background: #b99543;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ACTION LABEL
+========================================================= */
+
+.ciab2026-action-label {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION ARROW
+========================================================= */
+
+.ciab2026-action-symbol {
+  font-size: 15px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SECONDARY PANEL
+========================================================= */
+
+.ciab2026-secondary-panel {
+  min-width: 0;
+  min-height: 420px;
+
+  padding:
+    28px
+    20px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE WRAPPER
+========================================================= */
+
+.ciab2026-secondary-visual {
+  width: 100%;
+  height: 50vh;
+
+  margin-bottom: 18px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECONDARY IMAGE
+========================================================= */
+
+.ciab2026-secondary-visual-img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   SECONDARY MESSAGE
+========================================================= */
+
+.ciab2026-secondary-message {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  color: #a18a62;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  line-height: 1.55;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .ciab2026-main-shell {
+    min-height: 450px;
+  }
+
+  .ciab2026-primary-visual,
+  .ciab2026-secondary-panel {
+    min-height: 450px;
+  }
+
+  .ciab2026-central-content {
+    padding-left: 45px;
+  }
+
+  .ciab2026-main-heading {
+    font-size: 46px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .ciab2026-main-shell {
+    grid-template-columns:
+      38%
+      62%;
+  }
+
+  .ciab2026-secondary-panel {
+    display: none;
+  }
+
+  .ciab2026-central-content {
+    padding:
+      40px
+      35px;
+  }
+
+  .ciab2026-main-heading {
+    font-size: 36px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .ciab2026-main-shell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ciab2026-primary-visual {
+    width: 100%;
+
+    height: 280px;
+    min-height: 280px;
+  }
+
+  .ciab2026-central-content {
+    padding:
+      35px
+      24px
+      40px;
+  }
+
+  .ciab2026-section-kicker {
+    font-size: 9px;
+  }
+
+  .ciab2026-main-heading {
+    font-size: 32px;
+  }
+
+  .ciab2026-main-description {
+    font-size: 12px;
+  }
+
+  .ciab2026-statistics-row {
+    width: 100%;
+  }
+
+  .ciab2026-stat-unit {
+    flex: 1;
+
+    min-width: 0;
+
+    padding:
+      0 12px;
+  }
+
+  .ciab2026-stat-unit:first-child {
+    padding-left: 0;
+  }
+
+  .ciab2026-stat-value {
+    font-size: 21px;
+  }
+
+  .ciab2026-stat-caption {
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .ciab2026-primary-visual {
+    height: 230px;
+    min-height: 230px;
+  }
+
+  .ciab2026-central-content {
+    padding:
+      30px
+      20px
+      35px;
+  }
+
+  .ciab2026-main-heading {
+    font-size: 29px;
+  }
+
+  .ciab2026-stat-unit {
+    padding:
+      0 8px;
+  }
+
+  .ciab2026-stat-value {
+    font-size: 18px;
+  }
+
+  .ciab2026-stat-caption {
+    font-size: 8px;
+  }
+
+}
+
+/* =========================================================
+   COSMIC PROJECT GALLERY
+========================================================= */
+
+.cosmic-project-gallery {
+  background-color: #faf9f1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 0 6%;
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 60px;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.cosmic-project-gallery-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cosmic-project-gallery-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #cda653;
+  text-transform: uppercase;
+}
+
+.cosmic-project-gallery-content h2 {
+  margin: 0 0 22px;
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 500;
+  color: #292929;
+}
+
+.cosmic-project-gallery-content p {
+  max-width: 470px;
+  margin: 0 0 30px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #777;
+}
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.cosmic-project-gallery-explore {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 13px 20px;
+  border: 1px solid #292929;
+  background: #cda653;
+  color: #292929;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 12px;
+}
+
+.cosmic-project-gallery-explore span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.cosmic-project-gallery-explore:hover {
+  /* background: #ac8a41; */
+  color: #fff;
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.cosmic-project-gallery-right {
+  min-width: 0;
+  width: 100%;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.cosmic-project-gallery-tabs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.cosmic-project-gallery-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   TAB BUTTON
+========================================================= */
+
+.cosmic-project-gallery-tab {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  color: #777;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* GOLD UNDERLINE */
+
+.cosmic-project-gallery-tab::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  bottom: -1px;
+  height: 2px;
+  background: #cda653;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER */
+
+.cosmic-project-gallery-tab:hover {
+  color: #292929;
+}
+
+/* ACTIVE */
+
+.cosmic-project-gallery-tab-active {
+  color: #292929;
+  font-weight: 700;
+}
+
+.cosmic-project-gallery-tab-active::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   TAB PANEL
+========================================================= */
+
+.cosmic-project-gallery-panel {
+  width: 100%;
+  min-height: 390px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PROJECT PHOTOS
+========================================================= */
+
+.cosmic-project-gallery-photos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.45fr 0.8fr;
+  gap: 12px;
+}
+
+/* LARGE IMAGE */
+
+.cosmic-project-gallery-main-photo {
+  position: relative;
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.cosmic-project-gallery-main-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* PLAY BUTTON */
+
+.cosmic-project-gallery-play {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cosmic-project-gallery-play:hover {
+  background: #cda653;
+}
+
+/* SMALL GRID */
+
+.cosmic-project-gallery-small-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cosmic-project-gallery-small-grid img {
+  width: 100%;
+  height: 189px;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================================
+   INFORMATION TABS
+========================================================= */
+
+.cosmic-project-gallery-information {
+  width: 100%;
+  min-height: 390px;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #f8f8f8;
+}
+
+.cosmic-project-gallery-information h3 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #292929;
+}
+
+.cosmic-project-gallery-information > p {
+  max-width: 700px;
+  margin: 0 0 25px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #777;
+}
+
+/* =========================================================
+   AMENITIES
+========================================================= */
+
+.cosmic-project-gallery-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.cosmic-project-gallery-feature-grid > div {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+}
+
+.cosmic-project-gallery-feature-grid strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #292929;
+  font-size: 14px;
+}
+
+.cosmic-project-gallery-feature-grid span {
+  display: block;
+  color: #888;
+  font-size: 12px;
+}
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.cosmic-project-location-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.cosmic-project-location-box > span {
+  font-size: 24px;
+}
+
+.cosmic-project-location-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #292929;
+  font-size: 14px;
+}
+
+.cosmic-project-location-box p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* =========================================================
+   SPECIFICATIONS
+========================================================= */
+
+.cosmic-project-specifications {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.cosmic-project-specifications > div {
+  padding: 17px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.cosmic-project-specifications span {
+  display: block;
+  margin-bottom: 7px;
+  color: #888;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cosmic-project-specifications strong {
+  display: block;
+  color: #292929;
+  font-size: 14px;
+}
+
+/* =========================================================
+   FLOOR PLANS
+========================================================= */
+
+.cosmic-floor-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.cosmic-floor-plan-card {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  text-align: center;
+}
+
+.cosmic-floor-plan-card img {
+  width: 100%;
+  height: 150px;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.cosmic-floor-plan-card strong {
+  display: block;
+  padding-bottom: 7px;
+  color: #292929;
+  font-size: 13px;
+}
+
+/* =========================================================
+   BROCHURE
+========================================================= */
+
+.cosmic-project-brochure {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.cosmic-project-brochure-icon {
+  width: 75px;
+  height: 90px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #292929;
+  color: #cda653;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cosmic-project-brochure h3 {
+  margin-bottom: 10px;
+}
+
+.cosmic-project-brochure p {
+  margin-bottom: 18px;
+}
+
+.cosmic-project-brochure button {
+  padding: 12px 18px;
+  border: none;
+  background: #292929;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cosmic-project-brochure button:hover {
+  background: #cda653;
+  color: #292929;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .cosmic-project-gallery {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cosmic-project-gallery-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .cosmic-project-gallery-content p {
+    max-width: 650px;
+  }
+
+  .cosmic-project-gallery-tabs {
+    justify-content: flex-start;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .cosmic-project-gallery {
+    margin: 55px auto;
+    padding: 0 20px;
+  }
+
+  .cosmic-project-gallery-content h2 {
+    font-size: 32px;
+  }
+
+  .cosmic-project-gallery-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .cosmic-project-gallery-tabs {
+    gap: 0;
+  }
+
+  .cosmic-project-gallery-tab {
+    padding: 12px 13px;
+    font-size: 11px;
+  }
+
+  .cosmic-project-gallery-tab::after {
+    left: 10px;
+    right: 10px;
+  }
+
+  .cosmic-project-gallery-panel {
+    min-height: auto;
+  }
+
+  .cosmic-project-gallery-photos {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmic-project-gallery-main-photo {
+    height: 280px;
+  }
+
+  .cosmic-project-gallery-small-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cosmic-project-gallery-small-grid img {
+    height: 130px;
+  }
+
+  .cosmic-project-gallery-information {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .cosmic-project-gallery-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmic-project-specifications {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmic-floor-plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmic-floor-plan-card img {
+    height: 190px;
+  }
+
+  .cosmic-project-brochure {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .cosmic-project-gallery {
+    padding: 0 15px;
+  }
+
+  .cosmic-project-gallery-content h2 {
+    font-size: 28px;
+  }
+
+  .cosmic-project-gallery-main-photo {
+    height: 230px;
+  }
+
+  .cosmic-project-gallery-small-grid img {
+    height: 105px;
+  }
+
+  .cosmic-project-gallery-information {
+    padding: 18px;
+  }
+
+}
 /* =========================
    TESTIMONIAL SECTION
 ========================= */
