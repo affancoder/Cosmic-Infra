@@ -1,0 +1,597 @@
+/* =====================================================
+   UNIQUE FOOTER WRAPPER
+===================================================== */
+
+.signature-footer-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #062536 0%,
+      #031722 45%,
+      #000000 100%
+    );
+}
+
+
+/* =====================================================
+   VISIT SECTION
+===================================================== */
+
+.signature-footer-visit-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 330px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      #062637 0%,
+      #062637 35%,
+      rgba(5, 31, 46, 0.94) 55%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+
+/* =====================================================
+   BACKGROUND IMAGE
+===================================================== */
+
+.signature-footer-background-image {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 58%;
+  height: 100%;
+
+  z-index: 0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #062637 0%,
+      rgba(6, 38, 55, 0.88) 15%,
+      rgba(0, 0, 0, 0.08) 70%
+    ),
+    url("../assets/images/newtown-villa.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================================
+   VISIT CONTAINER
+===================================================== */
+
+.signature-footer-visit-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 55px 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+
+/* =====================================================
+   VISIT TEXT
+===================================================== */
+
+.signature-footer-visit-content {
+  flex: 1;
+
+  min-width: 300px;
+}
+
+
+.signature-footer-visit-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #d5b45d;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.signature-footer-visit-heading {
+  margin: 0 0 16px;
+
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 0.98;
+}
+
+
+.signature-footer-visit-description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTACT AREA
+===================================================== */
+
+.signature-footer-contact-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: 590px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+
+.signature-footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+
+.signature-footer-contact-symbol {
+  width: 22px;
+
+  flex-shrink: 0;
+
+  color: #d5b45d;
+
+  font-size: 17px;
+
+  text-align: center;
+}
+
+
+.signature-footer-contact-row p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+.signature-footer-contact-row strong {
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   BOOK VISIT BUTTON
+===================================================== */
+
+.signature-footer-visit-button {
+  width: fit-content;
+
+  margin-top: 9px;
+
+  padding: 13px 20px;
+
+  border: 1px solid #d5b45d;
+
+  background: #d5b45d;
+
+  color: #111111;
+
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.signature-footer-visit-button strong {
+  font-size: 16px;
+}
+
+
+.signature-footer-visit-button:hover {
+  background: transparent;
+
+  color: #d5b45d;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   LOWER FOOTER
+===================================================== */
+
+.signature-footer-navigation-section {
+  width: 100%;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  background:
+    linear-gradient(
+      90deg,
+      #041c2b 0%,
+      #020d15 55%,
+      #000000 100%
+    );
+}
+
+
+.signature-footer-navigation-container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 20px 4%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+/* =====================================================
+   FOOTER LOGO
+===================================================== */
+
+.signature-footer-brand-area {
+  flex-shrink: 0;
+}
+
+
+.signature-footer-brand-link {
+  display: block;
+}
+
+
+.signature-footer-brand-image {
+  display: block;
+
+  width: 135px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   FOOTER MENU
+===================================================== */
+
+.signature-footer-menu {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.signature-footer-menu a {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.signature-footer-menu a:hover {
+  color: #d5b45d;
+}
+
+
+/* =====================================================
+   SOCIAL AREA
+===================================================== */
+
+.signature-footer-social-area {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.signature-footer-social-item {
+  width: 36px;
+  height: 36px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.signature-footer-social-item:hover {
+  border-color: #d5b45d;
+
+  background: #d5b45d;
+
+  color: #111111;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.signature-footer-copyright {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.48
+    );
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .signature-footer-background-image {
+    width: 60%;
+
+    opacity: 0.5;
+  }
+
+
+  .signature-footer-visit-container {
+    padding: 50px 5%;
+
+    gap: 35px;
+  }
+
+
+  .signature-footer-contact-container {
+    width: 330px;
+  }
+
+
+  .signature-footer-navigation-container {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding: 25px 5%;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .signature-footer-visit-section {
+    min-height: auto;
+
+    background:
+      linear-gradient(
+        135deg,
+        #062637 0%,
+        #031823 55%,
+        #000000 100%
+      );
+  }
+
+
+  .signature-footer-background-image {
+    width: 100%;
+
+    opacity: 0.16;
+  }
+
+
+  .signature-footer-visit-container {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 45px 7%;
+
+    gap: 35px;
+  }
+
+
+  .signature-footer-visit-content {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .signature-footer-visit-heading {
+    font-size: 42px;
+  }
+
+
+  .signature-footer-contact-container {
+    width: 100%;
+  }
+
+
+  .signature-footer-navigation-container {
+    flex-direction: column;
+
+    padding: 28px 6%;
+
+    gap: 22px;
+  }
+
+
+  .signature-footer-menu {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px 20px;
+  }
+
+
+  .signature-footer-social-area {
+    justify-content: center;
+  }
+
+
+  .signature-footer-copyright {
+    white-space: normal;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+  .signature-footer-visit-container {
+    padding: 40px 6%;
+  }
+
+
+  .signature-footer-visit-heading {
+    font-size: 36px;
+  }
+
+
+  .signature-footer-visit-description {
+    font-size: 13px;
+  }
+
+
+  .signature-footer-menu {
+    gap: 13px 15px;
+  }
+
+
+  .signature-footer-menu a {
+    font-size: 8px;
+  }
+
+
+  .signature-footer-brand-image {
+    width: 125px;
+  }
+
+}

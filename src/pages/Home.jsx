@@ -1315,10 +1315,10 @@ function Home() {
   {/* SECTION HEADING */}
   <div className="cosmic-latest-heading">
 
-    <span>STAY UPDATED</span>
+    <span>Latest News</span>
 
     <h2>
-      Latest From Cosmic Infra
+      Updates & Insights
     </h2>
 
   </div>

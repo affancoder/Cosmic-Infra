@@ -3978,14 +3978,14 @@
   border: 1px solid #eee9dd;
 
   overflow: hidden;
-
+  border-radius: 12px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .cosmic-latest-card:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
 
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.08);
